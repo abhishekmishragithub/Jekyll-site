@@ -1,18 +1,15 @@
 ---
-title: Colophon
+title: About Abhishek
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hello Folks, I'm a software engineer currently working @Saama research lab in Chennai, from the Mumbai.
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+I'm a software engineer currently working [@Saama research lab](https://github.com/saamaresearch) in Chennai.
 
-If you have a question about him or else, just send a letter to him.
+**You can connect with me here ✨**
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
-
-**may u needs ✨**
-
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+- Twitter: <a href="https://twitter.com/stalwartcoder" target="_blank">@stalwartcoder</a>
+- LinkedIn: <a href="https://linkedin.com/in/stalwartcoder" target="_blank">@stalwartcoder</a>
+- GitHub: <a href="https://github.com/abhishekmishragithub" target="_blank">@abhishekmishragithub</a>
