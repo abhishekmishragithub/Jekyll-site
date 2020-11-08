@@ -2,7 +2,7 @@
 title: About Abhishek
 permalink: /about/
 layout: page
-excerpt: Hello Folks, I'm a software engineer currently working @Saama research lab in Chennai, from the Mumbai.
+excerpt: Hello Folks, I'm a software engineer currently working @Saama research lab in Chennai.
 comments: false
 ---
 
