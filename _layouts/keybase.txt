@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/stalwartcoder
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://abhishekmishra.dev
+  * I am stalwartcoder (https://keybase.io/stalwartcoder) on keybase.
+  * I have a public key with fingerprint 4065 585A 77BC 8F0C 2E1B  ED22 7134 3F29 4CB5 B3F3
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01017e7e020d9bfebd2323ecf1572baa5685e6baf1d2ccc36206b4fd1c346be26ffc0a",
+      "fingerprint": "4065585a77bc8f0c2e1bed2271343f294cb5b3f3",
+      "host": "keybase.io",
+      "key_id": "71343f294cb5b3f3",
+      "kid": "01017e7e020d9bfebd2323ecf1572baa5685e6baf1d2ccc36206b4fd1c346be26ffc0a",
+      "uid": "fe3e84ec441cb7a550c90ac5206df919",
+      "username": "stalwartcoder"
+    },
+    "service": {
+      "hostname": "abhishekmishra.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1619336269,
+  "expire_in": 157680000,
+  "prev": "87345e25579e72e539b3eb3d624fcc77bd3d2b059dc325304a6982dad168453d",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIrAnicrVJJaBRBFJ1xdyRqUBRRIpS4YZDuqq5eBlwwoAeJa+IShLG2nmkmdk+6
+ezKKjCLiBuKuIOIKisE9KsaoaFxQSVDcBTEXwQX0oEIE9+qgN4/WoYqq/9777//6
+N0u6xhLxFWdrtm3eNmtPvLXlUD62eM2wyuWAenwZSC4HWdF5iFougjCVdThIAkVV
+VEMYQoEKt6gtKIcIIsFsFRuQEoJ1EwudElvlkDGGdKjoVLO5ypCmUwF122YKAeXA
+dty08HO+44ZSVlN0jE1MDIMy01YYFCoVHEJDRRqyoaUxiimykSRmvCBiSHOUBGK8
+48k3eUl12vsH/j/7znfK2QIJUxNM01RGDYKxwiyFMCxZ3LZUKwIGwnfJEiHRQUhq
+C8QPmceFD4rlQIbqHSai7kbl/IERmnGCjMgukbtPxnNRL2Vyvhd6zKuV8UwY5oJk
+xA+X5SJCQdDUH6kUdVwuWyoZ9cIPHM8FSVUiWehE2qquWkgWpVvlQCzNOb5IOREC
+G7qpyBXlkemSwDSQhgXE2LCEAQVGFkWCIq5DzWZMfg9HHFIFW5whiJGiEd0yISdc
+1U0NIw6i4upcDyQ1aZOko+qdtEvCvC9A8fq1Rd1i8USsR/cu0ajFEr37/x3A9rqe
+P+GNwi/l2cR1FVktMfDxuy6fp4yYMHVx1cphxXHZr03nH95PVT9ZK9KpoV8Gz0k5
+6bbn0xPg9cRe8YN4V7G9rVD57UjF9nMNtGPtAnTS/4iav44sbK+e8eJ4Y1n3b5Ov
+jhydm3f4zeqGW93YrB0XDmwcPrus5iF7dCq+paR+X9vlsS8OdLS939gC2g9faXo5
+93TpscmVi/rtq7rzYVN+3bQ+jckb2b2liZXYuXjvx9KW/bq/IetO+vkpM+T+hwmN
+1XeKJ/Jnvty8dLSkZsih0rvfK141WHUHB/ddtf61vttsfeAcH9A87vGu0lEPBt3a
+qYdjjKDs6KeambNvP525Y647f+HWDuNt629lFEga
+=1k/7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stalwartcoder
+
+==================================================================
