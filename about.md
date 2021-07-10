@@ -6,7 +6,7 @@ excerpt: Hello Folks, I'm a software engineer currently working @Saama research 
 comments: false
 ---
 
-I'm a software engineer currently working [@Saama research lab](https://github.com/saamaresearch) in Chennai.
+I'm a software engineer mostly working on backend and infrastructure..
 
 **You can connect with me here ☎️👇🏻**
 
