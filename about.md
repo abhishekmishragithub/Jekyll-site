@@ -2,11 +2,11 @@
 title: About Abhishek
 permalink: /about/
 layout: page
-excerpt: Hello Folks, I'm a software engineer currently working @Saama research lab in Chennai.
+excerpt: Hello Folks, I'm a software engineer currently working @Prediction Machine.
 comments: false
 ---
 
-I'm a software engineer mostly working on backend and infrastructure..
+I'm a software engineer mostly working on backend and infrastructure [@Prediction Machine](https://predmachine.com/)
 
 **You can connect with me here ☎️👇🏻**
 
