@@ -5,14 +5,14 @@ description: >- # site description
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 image: assets/img/avatar.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+repo: https://github.com/abhishekmishragithub/Jekyll-site # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
   name: Abhishek Mishra # author name
   bio: >- # tell to the world
-    I'm a software engineer mostly working on backend and infrastructure @Prediction Machine.
+    I'm a software engineer mostly working on Python backend and infrastructure @Prediction Machine.
   username: stalwartcoder # general username
   github: abhishekmishragithub # github username
   twitter: stalwartcoder # twitter username
@@ -58,7 +58,7 @@ jekyll_compose:
     description:
 
 # Homepage limit posts
-number_of_posts: 5
+number_of_posts: 7
 
 # Build settings
 # theme: klise
