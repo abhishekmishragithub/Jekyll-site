@@ -12,7 +12,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Abhishek Mishra # author name
   bio: >- # tell to the world
-    Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate [@Yugabyte](https://yugabyte.com). [Know more](/about)
+    Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate @Yugabyte. Checkout /about to know more. 
   username: stalwartcoder # general username
   github: abhishekmishragithub # github username
   twitter: stalwartcoder # twitter username
