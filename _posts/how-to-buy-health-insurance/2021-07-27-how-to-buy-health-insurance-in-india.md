@@ -3,6 +3,7 @@ layout: post
 title:  "How to choose health insurance in India?"
 date:   2021-07-27 04:30:00 IST
 categories: other
+permalink: https://stalwartcoder.dev/how-to-choose-health-insurance-in-india
 ---
 Taking insurance is very important but confusing as well. We see a lot of ads, TV commercials; and every company says that they have the best policy in the market.
 Now, how do you decide which policy to take? 🤔
