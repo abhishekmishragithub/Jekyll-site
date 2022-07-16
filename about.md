@@ -2,7 +2,7 @@
 title: About Abhishek
 permalink: /about/
 layout: page
-excerpt: Hello Folks, I'm a software engineer currently working @Prediction Machine.
+excerpt: Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate [@Yugabyte](https://yugabyte.com).
 comments: false
 ---
 
