@@ -1,7 +1,7 @@
 # Site settings
 title: Abhishek Mishra # site title
 description: >- # site description
-  Abhishek Mishra's website.
+  A website for Abhishek Mishra, developer advocate for the YugabyteDB database.
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 image: assets/img/avatar.png # This image used for Open Graph more info https://ogp.me/
@@ -12,7 +12,8 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Abhishek Mishra # author name
   bio: >- # tell to the world
-    Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate @Yugabyte. Checkout /about to know more. 
+    Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate for the YugabyteDB, a distributed SQL database startup.
+    Checkout /about to know more.
   username: stalwartcoder # general username
   github: abhishekmishragithub # github username
   twitter: stalwartcoder # twitter username
