@@ -2,11 +2,11 @@
 title: About Abhishek
 permalink: /about/
 layout: page
-excerpt: Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate for the [YugabyteDB](https://www.yugabyte.com/yugabytedb/) database.
+excerpt: Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate for the [Dozer](https://www.getdozer.io), a data API backend.
 comments: false
 ---
 
-Hello, I am Abhishek from Mumbai, India. My pronouns are He/Him/His. I am working as a Developer Advocate [@Yugabyte](https://www.yugabyte.com/yugabytedb/)DB, a [distributed SQL](https://www.yugabyte.com/tech/distributed-sql/) database startup.
+Hello, I am Abhishek from Mumbai, India. My pronouns are He/Him/His. I am working as a Developer Advocate [@Dozer](https://www.github.com/getdozer/dozer), a data API backend startup, lets you build low latency APIs in few minutes from any data source.
 I'm a backend software engineer and DevOps, an Open Source enthusiast highly driven by dev communities and proficient in Python & its application architecture. Apart from my professional work, I contribute to and run a few developer communities, some conferences across India, evangelize for OSS, and D&I in the tech community.
 
 Side by side, I also mentor students and folks in the community. I like OSS (& communities) and doing infra <> DevOps work. I am a huge supporter of Python & the dev ecosystem around it, and I am well versed in implementing APIs (in Flask) and a bit of fronted (UI) work. I Like to read and implement more on the clean code paradigm! I love to attend conferences. Please take me along if you plan to attend one :wink:. I also contribute to dev communities - Python India - a few local chapters as well, such as [PyCon APAC](https://twitter.com/pyconapac), [PyLadies Chennai](https://chennai.pyladies.com/), and [GDG](https://gdg.community.dev/gdg-cloud-chennai/) to name a few.
@@ -23,5 +23,5 @@ I also like reading (current read - Fooled by randomness), and I like philosophy
 - LinkedIn: <a href="https://linkedin.com/in/stalwartcoder" target="_blank">@stalwartcoder</a>
 - GitHub: <a href="https://github.com/abhishekmishragithub" target="_blank">@abhishekmishragithub</a>
 - Dev.to: <a href="https://dev.to/stalwartcoder" target="_blank">@stalwartcoder</a>
-- Hashnode: <a href="https://hashnode.com/@stalwartcoder" target="_blank">@stalwartcoder</a>
+<!-- - Hashnode: <a href="https://hashnode.com/@stalwartcoder" target="_blank">@stalwartcoder</a> -->
 - Email:  <a href = "mailto: geekabhi@outlook.com">geekabhi [at] outlook [dot]  com</a>
