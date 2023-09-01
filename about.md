@@ -6,7 +6,7 @@ excerpt: Hello Folks, I am Abhishek from Mumbai, India, working as a Developer A
 comments: false
 ---
 
-Hello, I am Abhishek from Mumbai, India. My pronouns are He/Him/His. I am an aspiring Developer Advocate and have worked previously with YugabyteDB.
+Hello, I am Abhishek from Mumbai, India. My pronouns are He/Him/His. I am an aspiring Developer Advocate and have worked previously with YugabyteDB and a [PSF](https://www.python.org/psf-landing/) fellow.
 
 I'm a backend software engineer and DevOps, an Open Source enthusiast highly driven by dev communities and proficient in Python & its application architecture. Apart from my professional work, I contribute to and run a few developer communities, some conferences across India, and evangelize for OSS, and D&I in the tech community.
 
