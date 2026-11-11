@@ -1,6 +1,8 @@
 # Brewing illustration
 
-Asset: `assets/portfolio/brew-sequence.png` (2172 × 724 pixels, RGBA PNG).
+Source asset: `assets/portfolio/brew-sequence.png` (2172 × 724 pixels, RGBA PNG).
+
+Web asset: `assets/portfolio/brew-sequence.webp`, encoded with `cwebp -q 88 -alpha_q 100 -m 6`. Dimensions and alpha are preserved; the original PNG stays in source and is excluded from the generated site.
 
 Created with the built-in image-generation tool. This is an original illustrative character, not a photograph of Abhishek. The four frames form a short, finite flipbook; CSS displays one frame at a time without cropping or modifying the saved source. Reduced-motion users see the finished cup immediately after activation. No continuous autoplay.
 

@@ -71,6 +71,7 @@ include:
   - .htaccess
 
 exclude:
+  - assets/portfolio/brew-sequence.png
   - netlify.toml
   - .bundle
   - .openai
