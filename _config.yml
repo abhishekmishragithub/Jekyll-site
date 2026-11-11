@@ -70,6 +70,7 @@ include:
   - .htaccess
 
 exclude:
+  - netlify.toml
   - .bundle
   - .openai
   - docs

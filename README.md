@@ -4,7 +4,7 @@ A personal portfolio for [abhishekmishra.dev](https://abhishekmishra.dev): engin
 
 ## Run
 
-Use Ruby 3.3 or newer, Bundler 4.0.11, and Node 22+ for tests.
+The hosting runtime is pinned to Ruby 3.3.13 in `.ruby-version` and `netlify.toml`. Use Bundler 4.0.11 and Node 22+ for tests. The site was also built locally with Ruby 4.0.5.
 
 ```sh
 bundle config set --local path vendor/bundle
@@ -41,10 +41,10 @@ JEKYLL_ENV=production bundle exec jekyll build --trace
 python3 scripts/verify_site.py
 ```
 
-The ready-to-install workflow in `docs/verify-workflow.yml` also builds at `/preview` to catch broken subpath URLs. GitHub rejected installation because the connected credentials lack workflow-writing permission; it is not active CI. To enable it, copy that file to `.github/workflows/verify.yml` using credentials with that permission. Both root and subpath checks were run locally. Browser QA covers desktop/mobile layouts, index deep links and empty states, timer start/pause/reset/close/completion, brick controls, navigation, and image loading. Public social destinations may require login; automated checks deliberately validate local routes rather than treating third-party access restrictions as broken content.
+Netlify runs `sh scripts/ci.sh` before publishing: focused tests, production build, site verification, and a separate subpath build. The ready-to-install GitHub Actions workflow in `docs/verify-workflow.yml` also builds at `/preview` to catch broken subpath URLs. GitHub rejected installation because the connected credentials lack workflow-writing permission; it is not active CI. To enable it, copy that file to `.github/workflows/verify.yml` using credentials with that permission. Both root and subpath checks were run locally. Browser QA covers desktop/mobile layouts, index deep links and empty states, timer start/pause/reset/close/completion, brick controls, navigation, and image loading. Public social destinations may require login; automated checks deliberately validate local routes rather than treating third-party access restrictions as broken content.
 
 ## Deployment
 
-This branch is a reviewable rebuild. It does not change DNS or auto-deploy the custom domain. Existing static hosting should build with the locked gems, run `bundle exec jekyll build`, and publish `_site`. A separate owner-private Sites preview is built from the same source; its hosting identity is kept outside this public repository.
+This branch is a reviewable rebuild. It does not change DNS or auto-deploy the custom domain. Netlify uses the checked-in build configuration. Other static hosts should select Ruby 3.3.13, install the locked gems, run `bundle exec jekyll build`, and publish `_site`. An explicit `RUBY_VERSION` in a hosting dashboard may override `.ruby-version` and must agree with the repository pin. A separate owner-private Sites preview is built from the same source; its hosting identity is kept outside this public repository.
 
 The original Klisé source and its MIT license are retained. The new layout and illustration are custom to this portfolio.

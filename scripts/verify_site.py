@@ -55,7 +55,7 @@ expected = ['index.html', 'about/index.html', 'archive/index.html', 'resume/inde
             'Abhishek_Mishra_resume_v2.pdf', 'keybase.txt']
 for name in expected:
     if not (root / name).is_file(): errors.append(f'Missing preserved route: {name}')
-for name in ['docs', 'scripts', 'tests', 'vendor', '.git', '.bundle', '.openai', 'Gemfile.lock', 'Gemfile']:
+for name in ['docs', 'scripts', 'tests', 'vendor', '.git', '.bundle', '.openai', 'Gemfile.lock', 'Gemfile', 'netlify.toml']:
     if (root / name).exists(): errors.append(f'Build leaks development file: {name}')
 for name in ['feed.xml', 'sitemap.xml']:
     tree = ET.parse(root / name)
