@@ -6,11 +6,11 @@
   font-display: swap;
 }
 :root {
-  --paper: #fdfcfb;
-  --ink: #303230;
-  --muted: #737571;
-  --link: #38678c;
-  --line: #e9e8e4;
+  --paper: #fbf8f1;
+  --ink: #37332f;
+  --muted: #746b60;
+  --link: #985037;
+  --line: #e6ded1;
   --focus: #286a9b;
 }
 * {
@@ -230,119 +230,6 @@ small {
 }
 .event-list {
   margin-top: 25px;
-}
-.coffee-section {
-  position: relative;
-  min-height: 225px;
-  padding-right: 180px;
-  margin-top: 70px;
-}
-.coffee-section p {
-  font-size: 15px;
-}
-.coffee-corner {
-  position: absolute;
-  width: 150px;
-  right: 2px;
-  top: -16px;
-  text-align: center;
-}
-.aeropress {
-  width: 150px;
-  height: auto;
-  overflow: visible;
-}
-.brew-button {
-  font-size: 12px;
-  line-height: 1.8;
-  background: transparent;
-  border: 0;
-  color: var(--link);
-  padding: 6px 12px;
-  margin-top: 3px;
-  border-radius: 20px;
-  transition: background 0.2s;
-}
-.brew-button:hover:not(:disabled) {
-  background: #edf2f5;
-}
-.brew-button:disabled {
-  color: var(--muted);
-}
-.cup-coffee {
-  transform: translateY(40px);
-}
-.steam {
-  opacity: 0;
-}
-.press-body {
-  transform-origin: 90px 170px;
-}
-.chamber-coffee {
-  transform-origin: 90px 166px;
-}
-.coffee-corner[data-state="brewing"] .plunger {
-  animation: press 4s 0.2s cubic-bezier(0.35, 0, 0.55, 1) forwards;
-}
-.coffee-corner[data-state="brewing"] .chamber-coffee {
-  animation: drain 4s 0.2s linear forwards;
-}
-.coffee-corner[data-state="brewing"] .cup-coffee {
-  animation: fill 4s 0.2s linear forwards;
-}
-.coffee-corner[data-state="brewing"] .press-body {
-  animation: lift 1s 4.2s ease-in-out forwards;
-}
-.coffee-corner[data-state="brewing"] .steam {
-  animation: steam 1s 4.2s ease-out forwards;
-}
-.coffee-corner[data-state="done"] .plunger {
-  transform: translateY(59px);
-}
-.coffee-corner[data-state="done"] .chamber-coffee {
-  transform: scaleY(0.06);
-}
-.coffee-corner[data-state="done"] .cup-coffee {
-  transform: translateY(0);
-}
-.coffee-corner[data-state="done"] .press-body {
-  transform: translate(35px, -32px) rotate(10deg);
-  opacity: 0;
-}
-.coffee-corner[data-state="done"] .steam {
-  opacity: 0.7;
-  transform: translateY(-4px);
-}
-@keyframes press {
-  to {
-    transform: translateY(59px);
-  }
-}
-@keyframes drain {
-  to {
-    transform: scaleY(0.06);
-  }
-}
-@keyframes fill {
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes lift {
-  to {
-    transform: translate(35px, -32px) rotate(10deg);
-    opacity: 0;
-  }
-}
-@keyframes steam {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 0.7;
-    transform: translateY(-4px);
-  }
 }
 .elsewhere {
   margin-top: 55px;
@@ -623,25 +510,7 @@ td {
   .row-meta {
     font-size: 11px;
   }
-  .coffee-section {
-    padding-right: 132px;
-    min-height: 240px;
-  }
-  .coffee-corner {
-    width: 120px;
-    right: -5px;
-    top: 5px;
-  }
-  .aeropress {
-    width: 120px;
-  }
-  .coffee-section p {
-    font-size: 14px;
-  }
-  .brew-button {
-    padding: 6px 2px;
-    font-size: 11px;
-  }
+
   .index-row {
     grid-template-columns: 1fr 12px;
     gap: 4px 12px;
@@ -671,20 +540,6 @@ td {
   }
 }
 
-.coffee-surface {
-  opacity: 0;
-}
-.coffee-corner[data-state="brewing"] .coffee-surface {
-  animation: coffee-surface 1s 3.2s linear forwards;
-}
-.coffee-corner[data-state="done"] .coffee-surface {
-  opacity: 1;
-}
-@keyframes coffee-surface {
-  to {
-    opacity: 1;
-  }
-}
 @media print {
   body {
     background: white;
@@ -710,6 +565,407 @@ td {
     margin-top: 30px;
   }
   .index-row {
+    break-inside: avoid;
+  }
+}
+
+/* The journal: a quiet reading page with handwritten notes in its margin. */
+@font-face {
+  font-family: Caveat;
+  src: url("../fonts/caveat-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+.handwritten {
+  font-family: Caveat, cursive;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.15;
+}
+.site-shell {
+  width: min(100% - 64px, 850px);
+  position: relative;
+}
+.site-header {
+  padding: 38px 0 62px;
+}
+.identity {
+  display: flex;
+  align-items: baseline;
+}
+.identity .header-note {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 16px;
+}
+.journal-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 52px;
+  align-items: center;
+}
+.location-note {
+  font-family: Caveat, cursive;
+  font-size: 23px;
+  color: #7e705e;
+  margin-bottom: 18px;
+  transform: rotate(-2deg);
+  transform-origin: left;
+}
+.location-note span {
+  color: var(--link);
+}
+.journal-intro h1 {
+  font-size: 30px;
+  font-weight: 550;
+  letter-spacing: -1px;
+  margin: 0 0 30px;
+}
+.nickname {
+  display: block;
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--link);
+  margin-top: 5px;
+  padding-left: 92px;
+  transform: rotate(-4deg);
+}
+.intro-invitation {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 25px;
+}
+.intro-links {
+  margin-top: 22px;
+  gap: 25px;
+}
+.coffee-corner {
+  width: 300px;
+  text-align: center;
+  align-self: end;
+  position: relative;
+  padding-bottom: 4px;
+}
+.brew-note {
+  position: absolute;
+  top: -12px;
+  right: -5px;
+  font-size: 22px;
+  color: var(--link);
+  transform: rotate(5deg);
+  z-index: 1;
+}
+.brew-window {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+.brew-strip {
+  display: block;
+  width: 400%;
+  max-width: none;
+  height: auto;
+  will-change: transform;
+}
+.brew-button {
+  font-family: Caveat, cursive;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--link);
+  background: none;
+  border: 0;
+  border-bottom: 1px dashed #c7a48c;
+  padding: 3px 10px 5px;
+  margin: 5px auto 8px;
+  transition: transform 0.15s;
+}
+.brew-button:hover:not(:disabled) {
+  transform: rotate(-3deg);
+}
+.brew-button:disabled {
+  color: var(--muted);
+}
+.brew-status {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 19px;
+}
+.coffee-corner[data-state="brewing"] .brew-strip {
+  animation: brew-story 5.2s steps(1, end) forwards;
+}
+.coffee-corner[data-state="done"] .brew-strip {
+  transform: translateX(-75%);
+}
+@keyframes brew-story {
+  0% {
+    transform: translateX(0);
+  }
+  28% {
+    transform: translateX(-25%);
+  }
+  62% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+.journal-divider {
+  margin: 54px 0 52px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #9e8975;
+  font:
+    21px Caveat,
+    cursive;
+}
+.journal-divider i {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.home-section {
+  margin: 0 0 58px 165px;
+  width: calc(100% - 165px);
+  position: relative;
+}
+.home-section > h2 {
+  position: absolute;
+  left: -165px;
+  width: 135px;
+  top: 0;
+  margin: 0;
+  font:
+    500 24px/1.15 Caveat,
+    cursive;
+  color: #7f5a46;
+  transform: rotate(-3deg);
+}
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  left: -28px;
+  border-left: 1px solid var(--line);
+}
+.work-item {
+  margin-bottom: 21px;
+}
+.home-section .more-link {
+  font-size: 13px;
+}
+.off-clock .handwritten {
+  font-size: 22px;
+}
+.site-footer {
+  margin-top: 66px;
+  padding-bottom: 32px;
+}
+.footer-location {
+  color: var(--muted);
+}
+.page-heading,
+.prose,
+.wide-content {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-heading {
+  margin-bottom: 38px;
+}
+.prose .photo-collage {
+  max-width: none;
+}
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0 12px;
+  margin: 35px -25px 55px;
+  padding: 10px 20px;
+}
+.photo-print {
+  margin: 0 0 20px;
+  padding: 10px 10px 7px;
+  background: #fffefb;
+  border: 1px solid #e4dcd0;
+  box-shadow: 0 3px 8px #392c1710;
+  transform: rotate(-4deg);
+  position: relative;
+}
+.photo-print::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 23px;
+  background: #ddd1b7b3;
+  left: calc(50% - 35px);
+  top: -12px;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+.photo-print:nth-child(even) {
+  transform: rotate(4deg);
+  margin-top: 35px;
+}
+.photo-print:nth-child(3n) {
+  transform: rotate(-2deg);
+  margin-top: -15px;
+}
+.photo-print img {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  height: auto;
+}
+.photo-print figcaption {
+  font:
+    23px/1.3 Caveat,
+    cursive;
+  color: #756050;
+  padding: 8px 6px 0;
+}
+.collage-note {
+  padding: 35px 12px 5px 25px;
+  transform: rotate(3deg);
+}
+.collage-note .handwritten {
+  color: var(--link);
+  display: block;
+  margin-bottom: 16px;
+}
+.collage-note p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.collage-note svg {
+  color: #a48973;
+}
+.photo-collage-single {
+  grid-template-columns: 1.2fr 1fr;
+}
+@media (max-width: 800px) {
+  .journal-intro {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 25px;
+  }
+  .coffee-corner {
+    width: 250px;
+  }
+  .journal-intro h1 {
+    font-size: 27px;
+  }
+  .home-section {
+    margin-left: 130px;
+    width: calc(100% - 130px);
+  }
+  .home-section > h2 {
+    left: -130px;
+    width: 100px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 600px) {
+  .site-shell {
+    width: calc(100% - 40px);
+  }
+  .site-header {
+    padding: 26px 0 42px;
+  }
+  .identity .header-note {
+    display: none;
+  }
+  .journal-intro {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .journal-intro h1 {
+    font-size: 29px;
+    margin-bottom: 28px;
+  }
+  .nickname {
+    font-size: 23px;
+    padding-left: 108px;
+  }
+  .coffee-corner {
+    width: min(270px, 100%);
+    justify-self: center;
+  }
+  .brew-note {
+    top: -9px;
+    right: -16px;
+  }
+  .journal-divider {
+    margin: 35px 0;
+  }
+  .home-section {
+    width: 100%;
+    margin: 0 0 44px;
+  }
+  .home-section > h2 {
+    position: static;
+    width: auto;
+    margin: 0 0 20px;
+    font-size: 24px;
+  }
+  .home-section::before {
+    display: none;
+  }
+  .photo-collage {
+    margin: 20px 0 32px;
+    padding: 10px 5px;
+    gap: 0 6px;
+  }
+  .photo-collage-single {
+    grid-template-columns: 1fr;
+  }
+  .photo-print {
+    padding: 7px 7px 5px;
+  }
+  .photo-print figcaption {
+    font-size: 19px;
+  }
+  .collage-note {
+    grid-column: 1/-1;
+    padding: 15px 15px 5px;
+  }
+  .collage-note svg {
+    display: none;
+  }
+  .collage-note p br {
+    display: none;
+  }
+  .footer-location {
+    display: block;
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  .brew-button {
+    display: none;
+  }
+  .brew-strip {
+    will-change: auto;
+  }
+  .home-section {
     break-inside: avoid;
   }
 }

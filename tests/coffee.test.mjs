@@ -50,7 +50,7 @@ test("coffee plays once, prevents overlapping brews, and allows replay after com
   listeners.click();
   assert.equal(coffee.dataset.state, "brewing");
   assert.equal(button.disabled, true);
-  assert.equal(status.textContent, "Pressing your coffee.");
+  assert.equal(status.textContent, "A little patience for the press.");
   listeners.click();
   assert.equal(timers.size, 1);
   const timer = [...timers.values()][0];
@@ -59,7 +59,7 @@ test("coffee plays once, prevents overlapping brews, and allows replay after com
   assert.equal(coffee.dataset.state, "done");
   assert.equal(button.disabled, false);
   assert.equal(timers.size, 0);
-  assert.equal(status.textContent, "Coffee’s ready. Enjoy!");
+  assert.equal(status.textContent, "That’s better. Enjoy your cup.");
   listeners.click();
   assert.equal(coffee.dataset.state, "brewing");
   assert.equal(timers.size, 1);

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import {
   normalize,
   matchesItem,
@@ -77,4 +77,18 @@ test("real content filters show distinct project, social, and empty-result sets"
     find("community", "sponsorship").map((item) => item.id),
     ["pycon-india"],
   );
+});
+
+test("personal photo captions have accessible, existing local images", () => {
+  const photos = JSON.parse(
+    readFileSync(new URL("../_data/photos.json", import.meta.url)),
+  );
+  assert.equal(new Set(photos.map((photo) => photo.src)).size, photos.length);
+  for (const photo of photos) {
+    assert.ok(photo.alt && photo.caption);
+    assert.ok(photo.src.startsWith("/assets/"));
+    assert.ok(existsSync(new URL(`..${photo.src}`, import.meta.url)));
+    assert.ok(Number.isInteger(photo.width) && photo.width > 0);
+    assert.ok(Number.isInteger(photo.height) && photo.height > 0);
+  }
 });

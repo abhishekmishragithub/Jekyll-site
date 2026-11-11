@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
-<section class="intro-section" aria-labelledby="intro-title">
-  <div class="hello"><img class="avatar" src="{{ '/assets/img/abhishek_mishra_001.jpeg' | relative_url }}" alt="Abhishek smiling" width="64" height="64"><div><h1 id="intro-title">Abhishek Mishra</h1><p>Engineer, developer relations & community.</p></div></div>
+<section class="intro-section journal-intro" aria-labelledby="intro-title">
   <div class="intro-copy">
-    <p>Hi, I’m Abhishek. You might know me as <a href="https://github.com/abhishekmishragithub">stalwartcoder</a>, or Tofu.</p>
-    <p>I work on voice AI at <a href="https://smallest.ai">Smallest AI</a>. Most days, that means writing Python, building examples, and helping other developers get their ideas working.</p>
-    <p>I also help bring people together through <a href="https://bldrcollective.com">BLDR Collective</a>, Python, and local developer communities. A good workshop is one of my favourite ways to spend a day.</p>
+    <p class="location-note"><span aria-hidden="true">↗</span> Hello from Bengaluru</p>
+    <h1 id="intro-title">Abhishek Mishra<span class="handwritten nickname">or, just Tofu.</span></h1>
+    <p>I’m an engineer in developer relations at <a href="https://smallest.ai">Smallest AI</a>. I write Python, build with voice AI, and help other developers get their ideas working.</p>
+    <p>Outside that: <a href="https://bldrcollective.com">BLDR Collective</a>, community gatherings, a growing interest in manual-brew coffee, and LEGO.</p>
+    <p class="intro-invitation">Have a look around. I’ll put the coffee on.</p>
+    <div class="intro-links"><a href="mailto:geekabhi@outlook.com">Say hello <span aria-hidden="true">↗</span></a><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">→</span></a></div>
   </div>
-  <div class="intro-links"><a href="mailto:geekabhi@outlook.com">Email me <span aria-hidden="true">↗</span></a><a href="{{ '/about/' | relative_url }}">A little more about me <span aria-hidden="true">→</span></a></div>
+  {% include desk.html %}
 </section>
+<div class="journal-divider" aria-hidden="true"><span>from my desk</span><i></i><span>↓</span></div>
 <section class="home-section" id="work" aria-labelledby="work-title">
   <h2 id="work-title">Things I’ve worked on</h2>
   <div class="work-list">
@@ -36,8 +39,9 @@ layout: default
   </div>
   <a class="more-link" href="{{ '/archive/' | relative_url }}?type=event">Talks, events & recordings <span aria-hidden="true">→</span></a>
 </section>
-<section class="home-section coffee-section" aria-labelledby="coffee-title">
-  <div><h2 id="coffee-title">A few other things</h2><p>I’m into coffee, LEGO, and mechanical keyboards. I play tabla, too.</p><p>There’s usually an AeroPress nearby.<br>This one’s for you.</p>{% include desk.html %}</div>
+<section class="home-section off-clock" aria-labelledby="coffee-title">
+  <h2 id="coffee-title">Away from the screen</h2>
+  <div class="off-clock-content"><p>Coffee is one of my favourite rabbit holes. I brew with an AeroPress; I also build LEGO, tinker with mechanical keyboards, and play tabla.</p><a class="handwritten" href="{{ '/about/' | relative_url }}">a few more things about me →</a></div>
 </section>
 <section class="home-section elsewhere" aria-labelledby="elsewhere-title">
   <h2 id="elsewhere-title">Elsewhere</h2>

@@ -2,12 +2,14 @@
 layout: page
 title: A little about me
 kicker: The person behind the work
-description: Python, voice AI, community work, and a few things away from the keyboard.
+description: Based in Bengaluru. Engineering, community, manual-brew coffee, and LEGO.
 permalink: /about/
 ---
-<img class="about-photo" src="{{ '/assets/img/abhishek_mishra_001.jpeg' | relative_url }}" alt="Abhishek smiling at a community event" width="1280" height="853">
+{% include photo-collage.html %}
 
-Hi, I’m Abhishek Mishra. You might know me as **@stalwartcoder**, or **Tofu** on GitHub. I’m from Mumbai, and I work at the intersection of engineering, developer education, and community.
+Hi, I’m Abhishek Mishra. You might know me as **@stalwartcoder**, or **Tofu** on GitHub. I’m based in **Bengaluru**, and I work at the intersection of engineering, developer education, and community.
+
+Coffee gets a fair bit of my attention too—especially manual brewing with an AeroPress. Alongside LEGO, keyboards, and tabla, it’s one of the things I make room for outside work.
 
 These days, I’m in developer relations at [Smallest AI](https://smallest.ai), working with voice AI and helping developers build with it. My roots are in Python, backend engineering, and DevOps. I like taking something complicated, making it work, and leaving behind an explanation someone else can use.
 

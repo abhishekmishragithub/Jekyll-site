@@ -11,6 +11,7 @@ Researched 11 November 2026. This is a curated portfolio, not an exhaustive or a
 - PSF: https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html and https://www.python.org/psf/fellows-roster/ . Q1 2023 fellowship.
 - Community history: https://wiki.python.org/python/psf/PythonSoftwareFoundation/FellowNominations.html . PyCon India, PyCon APAC, PyLadies Chennai and others.
 - AeroPress and LEGO: explicitly supplied by the owner in the redesign brief.
+- Current location: Bengaluru (Bangalore), explicitly confirmed by the owner in this design revision; the earlier Mumbai biography is historical.
 - Portrait: existing repository asset `assets/img/abhishek_mishra_001.jpeg`.
 
 ## Work and writing
@@ -50,4 +51,6 @@ The owner confirmed the Instagram handle `stalwartcoder` in this conversation; b
 - https://ash.cv — owner-requested reference: quiet typography, short lines, content-led personal page.
 - Earlier exploration included https://deadsimplesites.com and https://sive.rs .
 
-The revised composition uses a 640px reading column, an existing portrait, original AeroPress SVG and finite press-to-brew animation. No source code, private fonts, or illustrations were copied from the references. Geist is self-hosted from the `@fontsource-variable/geist` 5.3.0 npm package under the SIL Open Font License; its license is retained in `assets/fonts/OFL.txt`.
+The revised composition keeps the reading column narrow beside handwritten margin notes, an existing portrait, original illustrated AeroPress flipbook and finite brewing sequence. No source code, private fonts, or illustrations were copied from the references. Geist is self-hosted from the `@fontsource-variable/geist` 5.3.0 npm package under the SIL Open Font License; its license is retained in `assets/fonts/OFL.txt`.
+
+The coffee-journal revision uses owner-supplied brewing illustrations as gesture/mood references, an original generated four-frame scene, and Caveat for sparse handwritten notes. The supplied reference artworks are not copied into the published site. See `docs/illustration-notes.md` for the complete generation prompt. Personal collage photos come only from `_data/photos.json`; currently just the existing portrait.

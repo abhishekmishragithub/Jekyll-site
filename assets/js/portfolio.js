@@ -68,8 +68,8 @@ if (coffee) {
     clearTimeout(timeout);
     coffee.dataset.state = "done";
     button.disabled = false;
-    button.textContent = "One more? ↻";
-    status.textContent = "Coffee’s ready. Enjoy!";
+    button.textContent = "Another cup? ↻";
+    status.textContent = "That’s better. Enjoy your cup.";
   }
   button.hidden = false;
   button.addEventListener("click", () => {
@@ -79,8 +79,8 @@ if (coffee) {
     void coffee.offsetWidth;
     coffee.dataset.state = "brewing";
     button.disabled = true;
-    button.textContent = "Brewing…";
-    status.textContent = "Pressing your coffee.";
+    button.textContent = "Easy does it…";
+    status.textContent = "A little patience for the press.";
     if (motion.matches) finish();
     else timeout = setTimeout(finish, 5200);
   });
