@@ -1,37 +1,19 @@
-<aside class="desk" aria-labelledby="desk-title">
-  <div class="desk-heading"><span class="eyebrow" id="desk-title">On my desk</span><span class="tiny-label">FIG. 01</span></div>
-  <svg class="desk-drawing" viewBox="0 0 360 270" role="img" aria-label="An AeroPress on a coffee cup, a notebook, and a small stack of colourful building bricks">
-    <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#d5cfc1"/></pattern></defs>
-    <rect width="360" height="270" fill="url(#dots)"/>
-    <g stroke="#343c35" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
-      <path d="m34 222 179-38 112 40-171 40Z" fill="#eee9dc" stroke="none"/>
-      <g transform="rotate(-9 235 174)"><path d="M192 133h86l11 72h-86Z" fill="#f9f7f1"/><path d="m202 133 11 72M214 151h44M217 160h34M219 169h41" fill="none" stroke="#aaa89d"/><path d="m228 186 5-8 6 8 6-13 6 13 5-7 6 7" fill="none" stroke="#a1442f"/></g>
-      <g class="coffee-object">
-        <path d="M83 178h72l-6 46q-29 15-59 0Z" fill="#e5ae48"/><path d="M154 183h12q15 15-1 28h-13" fill="none" stroke-width="5"/>
-        <ellipse cx="119" cy="179" rx="36" ry="9" fill="#f7f5ef"/><ellipse cx="119" cy="179" rx="27" ry="5" fill="#785c40"/>
-        <path d="M82 162h75v13H82Z" fill="#424c45"/><path d="M91 87h57l-5 75h-46Z" fill="#d8ded1"/>
-        <path d="M98 110h43l-3 44h-37Z" fill="#b9c3b0"/><path d="M110 79h20v34h-20Z" fill="#3d4740"/>
-        <path d="M99 65h43v14H99Z" fill="#465149"/><path d="M94 84h55v7H94Z" fill="#3d4740"/>
-        <path d="M102 124h7m-7 10h7m-7 10h7" fill="none"/><path d="M120 39q-8-8 0-16m12 20q-8-8 0-16" fill="none" stroke="#a19e91" class="steam"/>
-      </g>
-      <g id="brick-stack">
-        <g class="brick brick-bottom"><path d="m196 222 43-17 58 23-43 18Z" fill="#e2b44d"/><path d="m196 222 58 24v18l-58-24Z" fill="#c68e32"/><path d="m254 246 43-18v18l-43 18Z" fill="#b27a29"/><ellipse cx="222" cy="221" rx="9" ry="4" fill="#edc568"/><ellipse cx="249" cy="231" rx="9" ry="4" fill="#edc568"/><ellipse cx="242" cy="213" rx="9" ry="4" fill="#edc568"/><ellipse cx="269" cy="223" rx="9" ry="4" fill="#edc568"/></g>
-        <g class="brick brick-middle"><path d="m217 193 26-11 58 24-26 11Z" fill="#9baf9b"/><path d="m217 193 58 24v18l-58-24Z" fill="#607761"/><path d="m275 217 26-11v18l-26 11Z" fill="#465e4a"/><ellipse cx="239" cy="193" rx="9" ry="4" fill="#aabca8"/><ellipse cx="266" cy="204" rx="9" ry="4" fill="#aabca8"/></g>
-        <g class="brick brick-top"><path d="m204 167 26-11 58 24-26 11Z" fill="#d78061"/><path d="m204 167 58 24v18l-58-24Z" fill="#b6583e"/><path d="m262 191 26-11v18l-26 11Z" fill="#8e402e"/><ellipse cx="226" cy="167" rx="9" ry="4" fill="#e39779"/><ellipse cx="253" cy="178" rx="9" ry="4" fill="#e39779"/></g>
-      </g>
-      <path d="m50 249 72-8" stroke="#b4aea0"/><path d="m301 158 5-13m4 18 12-4" stroke="#b4aea0"/>
+<div class="coffee-corner" id="coffee" data-state="ready">
+  <svg class="aeropress" viewBox="0 0 180 230" role="img" aria-labelledby="press-title press-desc">
+    <title id="press-title">A little AeroPress</title><desc id="press-desc">A coffee press resting on a blue cup. Press the button to brew a cup.</desc>
+    <defs><clipPath id="chamber-clip"><path d="M64 88h52l-4 76H68Z"/></clipPath><clipPath id="cup-clip"><path d="M58 180h64l-6 33H64Z"/></clipPath></defs>
+    <ellipse cx="91" cy="222" rx="52" ry="4" fill="#eae8e3"/>
+    <g class="cup"><path d="M120 184h10c18 0 17 24-6 24h-6" fill="none" stroke="#657f9a" stroke-width="5"/><path d="M56 178h68l-6 36q-27 10-56 0Z" fill="#d9e4ed" stroke="#657f9a" stroke-width="1.5"/><g clip-path="url(#cup-clip)"><rect class="cup-coffee" x="58" y="181" width="66" height="37" fill="#94724f"/></g><ellipse cx="90" cy="178" rx="34" ry="5" fill="#f3f5f6" stroke="#657f9a" stroke-width="1.5"/><ellipse class="coffee-surface" cx="90" cy="178" rx="30" ry="3" fill="#7d593b"/></g>
+    <g class="steam" fill="none" stroke="#9cabae" stroke-width="1.4" stroke-linecap="round"><path d="M76 164q-8-8 0-16t0-15"/><path d="M91 160q-8-8 0-16t0-15"/><path d="M105 165q-8-8 0-16t0-15"/></g>
+    <g class="press-body">
+      <path d="M62 84h56l-4 80H66Z" fill="#e6e9e8" fill-opacity=".75" stroke="#65716e" stroke-width="1.5"/>
+      <g clip-path="url(#chamber-clip)"><rect class="chamber-coffee" x="63" y="102" width="55" height="64" fill="#9c7854" fill-opacity=".85"/><path d="M64 108h52" stroke="#c5a982" stroke-width="2"/></g>
+      <path d="M67 87l4 72" stroke="white" stroke-width="2" opacity=".8"/>
+      <g class="plunger"><path d="M70 27h40v67H70Z" fill="#c8d0ce" fill-opacity=".7" stroke="#65716e" stroke-width="1.5"/><path d="M75 30v59" stroke="white" stroke-width="2"/><rect x="66" y="89" width="48" height="9" rx="2" fill="#414c49"/><rect x="61" y="21" width="58" height="7" rx="3" fill="#59635f"/><path d="M65 22h50" stroke="#9ca5a1"/></g>
+      <path d="M62 84h56M58 165h64v6H58Z" fill="#59635f" stroke="#65716e" stroke-width="1.5"/><rect x="63" y="171" width="54" height="5" rx="2" fill="#343e3a"/>
+      <g fill="none" stroke="#69736e" stroke-width="1"><circle cx="101" cy="116" r="5"/><circle cx="100" cy="137" r="5"/></g><g fill="#4c5953" font-size="6" font-family="sans-serif" text-anchor="middle"><text x="101" y="118">2</text><text x="100" y="139">1</text></g>
     </g>
   </svg>
-  <p class="desk-caption">A little patience.<br>A few good building blocks.</p>
-  <div class="desk-actions"><button id="brew-open" type="button" hidden>A coffee break <span aria-hidden="true">↗</span></button><button id="bricks-play" type="button" hidden aria-label="Rearrange the building bricks">Rebuild <span aria-hidden="true">↻</span></button></div>
-  <p class="sr-only" id="brick-status" role="status"></p>
-</aside>
-<dialog id="brew-dialog" aria-labelledby="brew-title">
-  <div class="dialog-top"><span class="eyebrow">A small pause</span><button class="close-dialog" type="button" aria-label="Close coffee timer">×</button></div>
-  <h2 id="brew-title">Good things take<br><em>a little time.</em></h2>
-  <p>A two-minute pause for your AeroPress, or just for yourself. No recipe, no rush.</p>
-  <output id="brew-time" role="timer" aria-live="off" aria-label="Time remaining">02:00</output>
-  <p id="brew-status" role="status">Ready when you are.</p>
-  <div class="timer-actions"><button class="solid-button" id="brew-toggle" type="button">Start timer</button><button class="text-button" id="brew-reset" type="button">Reset</button></div>
-  <small>Keep this tab open. There’s no sound or notification.</small>
-</dialog>
+  <button class="brew-button" id="brew-button" type="button" hidden>Press for coffee <span aria-hidden="true">↓</span></button>
+  <span class="sr-only" id="brew-status" role="status" aria-live="polite"></span>
+</div>

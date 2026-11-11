@@ -3,12 +3,11 @@
     "id": "cookbook",
     "kind": "project",
     "title": "The voice AI cookbook",
-    "description": "Practical examples for building with Smallest AI. A shared kitchen of voice agents, speech, and useful experiments.",
+    "description": "Recipes and examples for building with voice AI. Part of my work with the Smallest team.",
     "url": "https://github.com/smallest-inc/cookbook",
     "source": "GitHub",
     "context": "Smallest AI · Team contribution",
-    "featured": true,
-    "icon": "wave"
+    "featured": true
   },
   {
     "id": "pipecat",
@@ -24,23 +23,21 @@
     "id": "cliplinks",
     "kind": "project",
     "title": "Cliplinks",
-    "description": "A small browser extension for a small daily annoyance: copying the right social profile link.",
+    "description": "A browser extension for quickly copying social profile links.",
     "url": "https://github.com/abhishekmishragithub/cliplinks",
     "source": "GitHub",
     "context": "Browser extension · Personal project",
-    "featured": true,
-    "icon": "link"
+    "featured": true
   },
   {
     "id": "talk-code",
     "kind": "project",
-    "title": "Talks, with the code left in",
-    "description": "Slides, demos, and runnable ideas from conference and meetup sessions.",
+    "title": "Talks & demo code",
+    "description": "Demo code from talks and workshops, for anyone who wants to try it themselves.",
     "url": "https://github.com/abhishekmishragithub/talks",
     "source": "GitHub",
     "context": "Talks / Demo code",
-    "featured": true,
-    "icon": "terminal"
+    "featured": true
   },
   {
     "id": "speech-guide",

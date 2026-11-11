@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 export JEKYLL_ENV=production
-node --test tests/portfolio.test.mjs
+node --test tests/*.test.mjs
 node --check assets/js/portfolio.js
 bundle exec jekyll build --trace
 python3 scripts/verify_site.py

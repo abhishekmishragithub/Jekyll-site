@@ -1,5 +1,5 @@
 ---
 layout: default
 ---
-<header class="page-heading"><p class="eyebrow">{{ page.kicker | default: 'From the workbench' }}</p><h1>{{ page.title | escape }}<span class="accent">.</span></h1>{% if page.description %}<p>{{ page.description }}</p>{% endif %}</header>
+<header class="page-heading"><h1>{{ page.title | escape }}</h1>{% if page.description %}<p>{{ page.description }}</p>{% endif %}</header>
 <div class="{% if page.wide %}wide-content{% else %}prose{% endif %}">{{ content }}</div>

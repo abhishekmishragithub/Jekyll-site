@@ -1,12 +1,8 @@
 <header class="site-header">
-  <a class="identity" href="{{ '/' | relative_url }}" aria-label="Abhishek Mishra, home">
-    <svg class="brand-mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 10 16 3l13 7v14l-13 7L3 24Z" fill="currentColor"/><path d="m3 10 13 7 13-7M16 17v14" fill="none" stroke="var(--paper)" stroke-width="1.5"/><ellipse cx="12" cy="9" rx="3" ry="1.6" fill="var(--paper)"/><ellipse cx="20" cy="13" rx="3" ry="1.6" fill="var(--paper)"/></svg>
-    <span>Abhishek Mishra<span class="identity-sub">Engineer. Community person.</span></span>
-  </a>
+  <a class="identity" href="{{ '/' | relative_url }}" aria-label="Abhishek Mishra, home">am<span aria-hidden="true">.</span></a>
   <nav aria-label="Main navigation">
-    <a href="{{ '/' | relative_url }}#work">Work</a>
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
     <a href="{{ '/archive/' | relative_url }}"{% if page.url == '/archive/' %} aria-current="page"{% endif %}>Index</a>
     <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
-    <a class="contact-nav" href="mailto:geekabhi@outlook.com">Say hello <span aria-hidden="true">↗</span></a>
   </nav>
 </header>

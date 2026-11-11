@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/portfolio.test.mjs
+      - run: node --test tests/*.test.mjs
       - run: node --check assets/js/portfolio.js
       - run: bundle exec jekyll build --trace
         env:

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The index
-kicker: A collection, not a feed
+kicker: Work, writing & community
 description: Projects, articles, talks, and conversations. Collected from across the internet, in one place.
 permalink: /archive/
 wide: true
@@ -15,7 +15,7 @@ wide: true
     <button class="filter-button" type="button" data-filter="community" aria-pressed="false">Community</button>
     <button class="filter-button" type="button" data-filter="social" aria-pressed="false">Social</button>
   </div>
-  <label class="search-field" for="index-search">Find something <input id="index-search" type="search" placeholder="Python, voice, coffee…" autocomplete="off"></label>
+  <label class="search-field" for="index-search">Find something <input id="index-search" type="search" placeholder="Python, voice, workshops…" autocomplete="off"></label>
 </div>
 <p class="index-count" id="index-count" role="status" aria-live="polite">{{ site.data.work.size }} things in the collection</p>
 <div id="index-list">
@@ -26,6 +26,6 @@ wide: true
 </a>
 {% endfor %}
 </div>
-<div class="empty-state" id="index-empty" hidden><h2>No matching pieces. Yet.</h2><p>Try another word, or clear the filters to see the whole collection.</p><button type="button" class="text-button" id="index-reset">Clear search & filters ↗</button></div>
+<div class="empty-state" id="index-empty" hidden><h2>Nothing matched your search.</h2><p>Try another word, or clear the filters to see the whole collection.</p><button type="button" class="text-button" id="index-reset">Clear search & filters ↗</button></div>
 <p class="archive-note">Looking for more? Explore <a href="https://dev.to/stalwartcoder">all writing on DEV</a>, <a href="https://github.com/abhishekmishragithub?tab=repositories">GitHub repositories</a>, or <a href="https://slides.com/abhishek-mishra">the slide collection</a>. Older posts are still available in the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>.</p>
 <p class="archive-note">For more gatherings, my Luma profiles are <a href="https://luma.com/user/stalwartcoder">@stalwartcoder</a> and <a href="https://luma.com/user/abhishek_">@abhishek_</a>. The events above identify my role in each one: speaking, co-hosting, or organising.</p>

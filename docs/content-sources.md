@@ -46,8 +46,8 @@ The owner confirmed the Instagram handle `stalwartcoder` in this conversation; b
 
 ## Design references
 
-- https://deadsimplesites.com — restrained presentation and content-first navigation.
-- https://sive.rs — personal homepage as a central index to a person’s work.
-- https://brianlovin.com — concise project and writing inventories.
+- https://www.adityainduraj.com/ — owner-requested reference: restrained hierarchy, readable biography, small writing inventory.
+- https://ash.cv — owner-requested reference: quiet typography, short lines, content-led personal page.
+- Earlier exploration included https://deadsimplesites.com and https://sive.rs .
 
-Original composition, palette, SVG desk illustration, and interactions; no template copied.
+The revised composition uses a 640px reading column, an existing portrait, original AeroPress SVG and finite press-to-brew animation. No source code, private fonts, or illustrations were copied from the references. Geist is self-hosted from the `@fontsource-variable/geist` 5.3.0 npm package under the SIL Open Font License; its license is retained in `assets/fonts/OFL.txt`.
