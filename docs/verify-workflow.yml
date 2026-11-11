@@ -1,0 +1,30 @@
+name: Verify portfolio
+on:
+  push:
+    branches: [master, codex/personal-workbench]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler: '4.0.11'
+          bundler-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/portfolio.test.mjs
+      - run: node --check assets/js/portfolio.js
+      - run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+      - run: python3 scripts/verify_site.py
+      - name: Verify project-subpath links
+        run: |
+          bundle exec jekyll build --baseurl /preview --destination /tmp/portfolio-subpath
+          python3 scripts/verify_site.py /tmp/portfolio-subpath /preview

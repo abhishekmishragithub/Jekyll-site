@@ -1,28 +1,34 @@
 ---
-title: About Abhishek
-permalink: /about/
 layout: page
-excerpt: Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate for the [Dozer](https://www.getdozer.io), a data API backend.
-comments: false
+title: A little about me
+kicker: The person behind the work
+description: Engineer by background. Community person by instinct. Curious about most things.
+permalink: /about/
 ---
+<img class="about-photo" src="{{ '/assets/img/abhishek_mishra_001.jpeg' | relative_url }}" alt="Abhishek smiling at a community event" width="1280" height="853">
 
-Hello, I am Abhishek from Mumbai, India. My pronouns are He/Him/His. I am an aspiring Developer Advocate and have worked previously with YugabyteDB and a [PSF](https://www.python.org/psf-landing/) fellow.
+Hi, I’m Abhishek Mishra. You might know me as **@stalwartcoder**, or **Tofu** on GitHub. I’m from Mumbai, and I work at the intersection of engineering, developer education, and community.
 
-I'm a backend software engineer and DevOps, an Open Source enthusiast highly driven by dev communities and proficient in Python & its application architecture. Apart from my professional work, I contribute to and run a few developer communities, some conferences across India, and evangelize for OSS, and D&I in the tech community.
+These days, I’m in developer relations at [Smallest AI](https://smallest.ai), working with voice AI and helping developers build with it. My roots are in Python, backend engineering, and DevOps. I like taking something complicated, making it work, and leaving behind an explanation someone else can use.
 
-Side by side, I also mentor students and folks in the community. I like OSS (& communities) and doing infra <> DevOps work. I am a huge supporter of Python & the dev ecosystem around it, and I am well-versed in implementing backend REST APIs and a bit of fronted (UI) work. I Like to read and implement more on the clean code paradigm! I love to attend conferences. Please take me along if you plan to attend one :wink:. I also contribute to dev communities - Python India - a few local chapters as well, such as [PyCon APAC](https://twitter.com/pyconapac), [PyLadies Chennai](https://chennai.pyladies.com/), and [GDG](https://gdg.community.dev/gdg-cloud-chennai/) to name a few.
+My work has taken me through developer tools, databases, and AI, including chapters at YugabyteDB, Dozer, and Tune AI. The through-line is the same: build useful things, share what you learn, and make it easier for the next person to start.
 
-You can find me giving talks or hosting events in dev communities over the weekend. [Here](https://slides.com/abhishek-mishra) is a tiny slide collection of a few of my talks (shameless plug).
+## People are part of the work.
 
-I am a coffee connoisseur and a big sucker for mechanical keyboards. I've spent a lot of time reading and going into a rabbit hole of Mechanical keyboards  :nerd_face:.
+Open source brought me into communities that became much more than places to talk about code. I’ve helped with PyCon India, PyCon APAC, PyLadies Chennai, and other developer gatherings, as an organiser, speaker, mentor, and occasionally the person holding the mic.
 
-I also like reading (current read - Beyond Good and Evil by Friedrich Nietzsche), and I like philosophy & history as well. I have a wide range of tastes in music including Indian classical music. Did I mention I play Tabla (musical instrument) as well?
+In 2023, I was elected a [Python Software Foundation Fellow](https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html). It’s a connection to a community I care deeply about. Welcoming people into that community, especially those who haven’t always felt included in tech, matters to me.
 
-**You can connect with me here ☎️👇🏻**
+I enjoy mentoring, pair programming, and the conversation that starts after a talk. If you’re organising something, [let’s talk](mailto:geekabhi@outlook.com).
 
-- Twitter: <a href="https://twitter.com/stalwartcoder" target="_blank">@stalwartcoder</a>
-- LinkedIn: <a href="https://linkedin.com/in/stalwartcoder" target="_blank">@stalwartcoder</a>
-- GitHub: <a href="https://github.com/abhishekmishragithub" target="_blank">@abhishekmishragithub</a>
-- Dev.to: <a href="https://dev.to/stalwartcoder" target="_blank">@stalwartcoder</a>
-<!-- - Hashnode: <a href="https://hashnode.com/@stalwartcoder" target="_blank">@stalwartcoder</a> -->
-- Email:  <a href = "mailto: geekabhi@outlook.com">geekabhi [at] outlook [dot]  com</a>
+## The other building blocks.
+
+Coffee is a bit of a rabbit hole. The AeroPress is part of it. So are LEGO, mechanical keyboards, philosophy, and history. I also play tabla and enjoy Indian classical music.
+
+I like having things in my life that ask for a different kind of attention. Sometimes that’s working through a technical problem. Sometimes it’s putting the next brick in the right place.
+
+## Find me around.
+
+<div class="about-links"><a href="https://github.com/abhishekmishragithub">GitHub ↗</a><a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn ↗</a><a href="https://x.com/stalwartcoder">X ↗</a><a href="https://dev.to/stalwartcoder">DEV ↗</a><a href="https://slides.com/abhishek-mishra">Slides ↗</a>{% if site.instagram_url %}<a href="{{ site.instagram_url }}">Instagram ↗</a>{% endif %}<a href="mailto:geekabhi@outlook.com">Email ↗</a></div>
+
+[Browse my work]({{ '/archive/' | relative_url }}) · [Résumé (2025 PDF)]({{ '/assets/misc/Abhishek_Mishra_Resume_v2_2025.pdf' | relative_url }})

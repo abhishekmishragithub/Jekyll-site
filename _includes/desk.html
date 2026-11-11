@@ -1,0 +1,37 @@
+<aside class="desk" aria-labelledby="desk-title">
+  <div class="desk-heading"><span class="eyebrow" id="desk-title">On my desk</span><span class="tiny-label">FIG. 01</span></div>
+  <svg class="desk-drawing" viewBox="0 0 360 270" role="img" aria-label="An AeroPress on a coffee cup, a notebook, and a small stack of colourful building bricks">
+    <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#d5cfc1"/></pattern></defs>
+    <rect width="360" height="270" fill="url(#dots)"/>
+    <g stroke="#343c35" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+      <path d="m34 222 179-38 112 40-171 40Z" fill="#eee9dc" stroke="none"/>
+      <g transform="rotate(-9 235 174)"><path d="M192 133h86l11 72h-86Z" fill="#f9f7f1"/><path d="m202 133 11 72M214 151h44M217 160h34M219 169h41" fill="none" stroke="#aaa89d"/><path d="m228 186 5-8 6 8 6-13 6 13 5-7 6 7" fill="none" stroke="#a1442f"/></g>
+      <g class="coffee-object">
+        <path d="M83 178h72l-6 46q-29 15-59 0Z" fill="#e5ae48"/><path d="M154 183h12q15 15-1 28h-13" fill="none" stroke-width="5"/>
+        <ellipse cx="119" cy="179" rx="36" ry="9" fill="#f7f5ef"/><ellipse cx="119" cy="179" rx="27" ry="5" fill="#785c40"/>
+        <path d="M82 162h75v13H82Z" fill="#424c45"/><path d="M91 87h57l-5 75h-46Z" fill="#d8ded1"/>
+        <path d="M98 110h43l-3 44h-37Z" fill="#b9c3b0"/><path d="M110 79h20v34h-20Z" fill="#3d4740"/>
+        <path d="M99 65h43v14H99Z" fill="#465149"/><path d="M94 84h55v7H94Z" fill="#3d4740"/>
+        <path d="M102 124h7m-7 10h7m-7 10h7" fill="none"/><path d="M120 39q-8-8 0-16m12 20q-8-8 0-16" fill="none" stroke="#a19e91" class="steam"/>
+      </g>
+      <g id="brick-stack">
+        <g class="brick brick-bottom"><path d="m196 222 43-17 58 23-43 18Z" fill="#e2b44d"/><path d="m196 222 58 24v18l-58-24Z" fill="#c68e32"/><path d="m254 246 43-18v18l-43 18Z" fill="#b27a29"/><ellipse cx="222" cy="221" rx="9" ry="4" fill="#edc568"/><ellipse cx="249" cy="231" rx="9" ry="4" fill="#edc568"/><ellipse cx="242" cy="213" rx="9" ry="4" fill="#edc568"/><ellipse cx="269" cy="223" rx="9" ry="4" fill="#edc568"/></g>
+        <g class="brick brick-middle"><path d="m217 193 26-11 58 24-26 11Z" fill="#9baf9b"/><path d="m217 193 58 24v18l-58-24Z" fill="#607761"/><path d="m275 217 26-11v18l-26 11Z" fill="#465e4a"/><ellipse cx="239" cy="193" rx="9" ry="4" fill="#aabca8"/><ellipse cx="266" cy="204" rx="9" ry="4" fill="#aabca8"/></g>
+        <g class="brick brick-top"><path d="m204 167 26-11 58 24-26 11Z" fill="#d78061"/><path d="m204 167 58 24v18l-58-24Z" fill="#b6583e"/><path d="m262 191 26-11v18l-26 11Z" fill="#8e402e"/><ellipse cx="226" cy="167" rx="9" ry="4" fill="#e39779"/><ellipse cx="253" cy="178" rx="9" ry="4" fill="#e39779"/></g>
+      </g>
+      <path d="m50 249 72-8" stroke="#b4aea0"/><path d="m301 158 5-13m4 18 12-4" stroke="#b4aea0"/>
+    </g>
+  </svg>
+  <p class="desk-caption">A little patience.<br>A few good building blocks.</p>
+  <div class="desk-actions"><button id="brew-open" type="button" hidden>A coffee break <span aria-hidden="true">↗</span></button><button id="bricks-play" type="button" hidden aria-label="Rearrange the building bricks">Rebuild <span aria-hidden="true">↻</span></button></div>
+  <p class="sr-only" id="brick-status" role="status"></p>
+</aside>
+<dialog id="brew-dialog" aria-labelledby="brew-title">
+  <div class="dialog-top"><span class="eyebrow">A small pause</span><button class="close-dialog" type="button" aria-label="Close coffee timer">×</button></div>
+  <h2 id="brew-title">Good things take<br><em>a little time.</em></h2>
+  <p>A two-minute pause for your AeroPress, or just for yourself. No recipe, no rush.</p>
+  <output id="brew-time" role="timer" aria-live="off" aria-label="Time remaining">02:00</output>
+  <p id="brew-status" role="status">Ready when you are.</p>
+  <div class="timer-actions"><button class="solid-button" id="brew-toggle" type="button">Start timer</button><button class="text-button" id="brew-reset" type="button">Reset</button></div>
+  <small>Keep this tab open. There’s no sound or notification.</small>
+</dialog>

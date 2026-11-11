@@ -1,0 +1,212 @@
+[
+  {
+    "id": "cookbook",
+    "kind": "project",
+    "title": "The voice AI cookbook",
+    "description": "Practical examples for building with Smallest AI. A shared kitchen of voice agents, speech, and useful experiments.",
+    "url": "https://github.com/smallest-inc/cookbook",
+    "source": "GitHub",
+    "context": "Smallest AI · Team contribution",
+    "featured": true,
+    "icon": "wave"
+  },
+  {
+    "id": "pipecat",
+    "kind": "writing",
+    "title": "Build a low-latency voice agent in Python",
+    "description": "A hands-on guide to Pipecat, streaming speech, interruptions, and measuring the latency in between.",
+    "url": "https://dev.to/stalwartcoder/build-a-low-latency-voice-agent-in-python-with-pipecat-3plb",
+    "source": "DEV",
+    "context": "Python / Voice AI",
+    "featured": true
+  },
+  {
+    "id": "cliplinks",
+    "kind": "project",
+    "title": "Cliplinks",
+    "description": "A small browser extension for a small daily annoyance: copying the right social profile link.",
+    "url": "https://github.com/abhishekmishragithub/cliplinks",
+    "source": "GitHub",
+    "context": "Browser extension · Personal project",
+    "featured": true,
+    "icon": "link"
+  },
+  {
+    "id": "talk-code",
+    "kind": "project",
+    "title": "Talks, with the code left in",
+    "description": "Slides, demos, and runnable ideas from conference and meetup sessions.",
+    "url": "https://github.com/abhishekmishragithub/talks",
+    "source": "GitHub",
+    "context": "Talks / Demo code",
+    "featured": true,
+    "icon": "terminal"
+  },
+  {
+    "id": "speech-guide",
+    "kind": "writing",
+    "title": "A developer’s guide to speech-to-text in Python",
+    "description": "From batch transcription to streaming audio: building with speech recognition.",
+    "url": "https://dev.to/stalwartcoder/build-voice-ai-in-python-complete-speech-to-text-developer-guide-2026-1oe2",
+    "source": "DEV",
+    "context": "Python / Speech-to-text",
+    "date": "2026-02-10",
+    "featured": true
+  },
+  {
+    "id": "xy",
+    "kind": "writing",
+    "title": "Don’t be that dev: avoiding the XY problem trap",
+    "description": "Before solving the problem in front of you, make sure it is the right problem.",
+    "url": "https://dev.to/stalwartcoder/dont-be-that-dev-avoiding-the-xy-problem-trap-bho",
+    "source": "DEV",
+    "context": "Engineering / Problem-solving",
+    "date": "2024-02-20",
+    "featured": true
+  },
+  {
+    "id": "slora",
+    "kind": "writing",
+    "title": "Efficient fine-tuning for LLMs using SLoRA",
+    "description": "A technical walkthrough of efficient fine-tuning, written at Tune AI.",
+    "url": "https://dev.to/tunehqai/how-to-do-efficient-fine-tuning-for-llms-using-slora-1a27",
+    "source": "DEV / Tune AI",
+    "context": "Machine learning",
+    "date": "2024-08-07"
+  },
+  {
+    "id": "jev",
+    "kind": "writing",
+    "title": "Jev is not a small LLM",
+    "description": "A technical guide to System One models.",
+    "url": "https://dev.to/stalwartcoder/jev-is-not-a-small-llm-a-technical-guide-to-system-one-models-25m2",
+    "source": "DEV",
+    "context": "Models / AI"
+  },
+  {
+    "id": "yugabyte",
+    "kind": "writing",
+    "title": "Moving a Python app to a distributed database",
+    "description": "Three steps from a Python application to YugabyteDB.",
+    "url": "https://dev.to/yugabyte/moving-a-python-application-to-a-distributed-database-in-three-easy-steps-412p",
+    "source": "DEV / YugabyteDB",
+    "context": "Python / Databases",
+    "date": "2022-07-15"
+  },
+  {
+    "id": "fastapi",
+    "kind": "writing",
+    "title": "Deploying FastAPI with YugabyteDB to Heroku",
+    "description": "An application deployment walkthrough from the archive.",
+    "url": "https://dev.to/yugabyte/deploying-fastapi-python-application-with-yugabytedb-to-heroku-2bad",
+    "source": "DEV / YugabyteDB",
+    "context": "Python / Deployment",
+    "date": "2022-07-22"
+  },
+  {
+    "id": "cloudways",
+    "kind": "event",
+    "title": "Voice AI agents: from demo to production",
+    "description": "A practical session at the Cloudways Prepathon Builder Meetup in Bengaluru.",
+    "url": "https://luma.com/wpsxaszs",
+    "source": "Luma",
+    "context": "Cloudways Prepathon · Bengaluru",
+    "year": "2026",
+    "featured": true
+  },
+  {
+    "id": "voxgig",
+    "kind": "event",
+    "title": "Engineering your way into DevRel",
+    "description": "On developer playgrounds, communities, and bringing an engineering background to developer relations.",
+    "url": "https://www.voxgig.com/podcast/abhishek-mishra-devrel-engineer-tune-ai",
+    "source": "Voxgig",
+    "context": "Podcast · Episode 239",
+    "date": "2025-02-18",
+    "year": "2025",
+    "featured": true
+  },
+  {
+    "id": "temporal",
+    "kind": "event",
+    "title": "An AI-powered GitHub bot with Temporal",
+    "description": "Talk slides exploring durable workflows and an AI-powered GitHub bot.",
+    "url": "https://slides.com/abhishek-mishra",
+    "source": "Slides",
+    "context": "Talk · Slides collection",
+    "date": "2025-07-17",
+    "year": "2025",
+    "featured": true
+  },
+  {
+    "id": "psf",
+    "kind": "community",
+    "title": "Python Software Foundation Fellow",
+    "description": "Elected in Q1 2023, following contributions to Python communities and conferences.",
+    "url": "https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html",
+    "source": "Python Software Foundation",
+    "context": "Python / Community",
+    "year": "2023"
+  },
+  {
+    "id": "indiafoss",
+    "kind": "community",
+    "title": "Behind the mic at IndiaFOSS",
+    "description": "Part of the emcee team at IndiaFOSS 3.0.",
+    "url": "https://forum.fossunited.org/t/indiafoss-3-0-documentation-request-for-volunteers-comment/2692",
+    "source": "FOSS United",
+    "context": "IndiaFOSS / Open source",
+    "year": "2023"
+  },
+  {
+    "id": "llama",
+    "kind": "social",
+    "title": "A weekend mentoring at the Llama Hackathon",
+    "description": "Notes from helping teams build AI projects for social good.",
+    "url": "https://www.linkedin.com/posts/stalwartcoder_metallamahackathon-aiforsocialgood-innovation-activity-7264491341147983872-blz5",
+    "source": "LinkedIn",
+    "context": "Mentoring / Hackathons",
+    "year": "2024",
+    "featured": true
+  },
+  {
+    "id": "x-projects",
+    "kind": "social",
+    "title": "Ten projects from the hackathon",
+    "description": "A thread from the Llama Hackathon, linked from my event recap.",
+    "url": "https://x.com/stalwartcoder/status/1851131074736238804",
+    "source": "X",
+    "context": "Projects / Hackathons",
+    "year": "2024",
+    "featured": true
+  },
+  {
+    "id": "smallest",
+    "kind": "social",
+    "title": "A new chapter at Smallest AI",
+    "description": "Building voice experiences and helping developers get started.",
+    "url": "https://www.linkedin.com/posts/stalwartcoder_smallestai-voiceai-devrel-activity-7422137607452573696-qY3J",
+    "source": "LinkedIn",
+    "context": "Voice AI / Developer relations",
+    "featured": true
+  },
+  {
+    "id": "transfer",
+    "kind": "project",
+    "title": "A voice agent that hands over the call",
+    "description": "A support example with verification and a cold transfer to a human.",
+    "url": "https://github.com/abhishekmishragithub/smallest-jacket-transfer-example",
+    "source": "GitHub",
+    "context": "Voice AI / Support workflows"
+  },
+  {
+    "id": "insurance-archive",
+    "kind": "writing",
+    "title": "How to choose health insurance in India?",
+    "description": "A personal note from 2021, preserved in the archive. Not updated guidance.",
+    "url": "/how-to-buy-health-insurance/",
+    "source": "Personal blog",
+    "context": "From the archive",
+    "date": "2021-07-27"
+  }
+]

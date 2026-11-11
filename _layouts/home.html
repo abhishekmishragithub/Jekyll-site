@@ -1,14 +1,47 @@
 ---
 layout: default
-home: true
 ---
-
-<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-{%- for post in site.posts limit: site.number_of_posts -%}
-<article class="post-item">
-  <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
-  <h4 class="post-item-title">
-    <a href="{{ post.permalink }}">{{ post.title | escape }}</a>
-  </h4>
-</article>
-{%- endfor -%}
+<section class="hero" aria-labelledby="intro-title">
+  <div class="hero-copy">
+    <p class="eyebrow greeting"><span class="status-dot" aria-hidden="true"></span> Hello, I’m Abhishek. <span class="muted">Also, Tofu.</span></p>
+    <h1 id="intro-title">I build things.<br>And bring<br><em>people together.</em></h1>
+    <p class="intro">An engineer in developer relations. I work on voice AI at <a href="https://smallest.ai">Smallest AI</a>, help grow Python communities, and share what I learn along the way.</p>
+    <div class="hero-links"><a class="underlined" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a href="{{ '/about/' | relative_url }}">A bit about me <span aria-hidden="true">↗</span></a></div>
+  </div>
+  {% include desk.html %}
+</section>
+<div class="intro-strip"><span><span class="small-square" aria-hidden="true"></span> Currently building with voice</span><a href="https://www.python.org/psf/fellows-roster/">PSF Fellow <span aria-hidden="true">↗</span></a><span>Usually thinking about coffee</span></div>
+<section class="section-block" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><div><span class="eyebrow">01 / Building</span><h2 id="work-title">Selected work<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=project">All projects <span aria-hidden="true">↗</span></a></div>
+  <div class="project-list">
+    {% assign projects = site.data.work | where: 'kind', 'project' | where: 'featured', true %}
+    {% for item in projects %}
+    <a class="project-row" href="{{ item.url }}">
+      <span class="project-icon icon-{{ item.icon }}" aria-hidden="true">{% if item.icon == 'wave' %}<svg viewBox="0 0 40 40"><path d="M7 18v4m6-12v20m7-26v32m7-23v14m6-9v4"/></svg>{% elsif item.icon == 'link' %}<svg viewBox="0 0 40 40"><path d="m16 24 8-8m-6-4 3-3a8 8 0 0 1 11 11l-3 3M22 28l-3 3A8 8 0 0 1 8 20l3-3"/></svg>{% else %}<svg viewBox="0 0 40 40"><path d="m8 12 8 8-8 8m14 0h10"/></svg>{% endif %}</span>
+      <div><p class="tiny-label">{{ item.context }}</p><h3>{{ item.title }}</h3><p>{{ item.description }}</p></div><span class="row-arrow" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+<section class="section-block writing-section" id="writing" aria-labelledby="writing-title">
+  <div class="section-heading"><div><span class="eyebrow">02 / Thinking out loud</span><h2 id="writing-title">Notes from the work<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=writing">All writing <span aria-hidden="true">↗</span></a></div>
+  <div class="writing-layout"><p class="section-aside">Things I’ve figured out,<br>things I’m still figuring out.<br><span class="serif-note">Shared as I go.</span></p><div class="writing-list">
+    {% assign writing = site.data.work | where: 'kind', 'writing' | where: 'featured', true %}
+    {% for item in writing %}<a class="writing-row" href="{{ item.url }}"><span class="tiny-label">{{ item.context }} <span class="muted">/ {{ item.source }}</span></span><h3>{{ item.title }} <span aria-hidden="true">↗</span></h3></a>{% endfor %}
+  </div></div>
+</section>
+<section class="section-block" id="community" aria-labelledby="community-title">
+  <div class="section-heading"><div><span class="eyebrow">03 / Better together</span><h2 id="community-title">Outside the editor<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=event">Talks & events <span aria-hidden="true">↗</span></a></div>
+  <div class="community-intro"><p>Some of my favourite work happens in a room full of curious people. Talks, workshops, mentoring, and the people who make open source feel like home.</p><a class="fellow-stamp" href="https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html"><span class="tiny-label">Python Software Foundation</span><strong>Fellow, since 2023</strong><span class="tiny-label">For the community. With the community. ↗</span></a></div>
+  <div class="event-list">{% assign events = site.data.work | where: 'kind', 'event' | where: 'featured', true %}{% for item in events %}<a class="event-row" href="{{ item.url }}"><span class="event-year">{{ item.year }}</span><div><span class="tiny-label">{{ item.context }}</span><h3>{{ item.title }}</h3></div><span class="row-arrow" aria-hidden="true">↗</span></a>{% endfor %}</div>
+  <p class="community-footnote">Also part of the story: <a href="https://wiki.python.org/python/psf/PythonSoftwareFoundation/FellowNominations.html">PyCon India, PyCon APAC & PyLadies Chennai</a>, and <a href="https://forum.fossunited.org/t/indiafoss-3-0-documentation-request-for-volunteers-comment/2692">IndiaFOSS</a>.</p>
+</section>
+<section class="section-block elsewhere-section" aria-labelledby="elsewhere-title">
+  <div class="section-heading"><div><span class="eyebrow">04 / Around the internet</span><h2 id="elsewhere-title">A few loose threads<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=social">More posts <span aria-hidden="true">↗</span></a></div>
+  <div class="social-notes">{% assign posts = site.data.work | where: 'kind', 'social' | where: 'featured', true %}{% for item in posts limit: 3 %}<a class="social-note" href="{{ item.url }}"><span class="tiny-label">{{ item.source }} <span aria-hidden="true">↗</span></span><h3>{{ item.title }}</h3><p>{{ item.description }}</p></a>{% endfor %}</div>
+</section>
+<section class="offscreen" aria-labelledby="offscreen-title">
+  <div class="portrait-wrap"><img src="{{ '/assets/img/abhishek_mishra_001.jpeg' | relative_url }}" alt="Abhishek smiling at a community event" width="1280" height="853" loading="lazy"><span class="portrait-caption">The person behind the tabs.</span></div>
+  <div><span class="eyebrow">Away from the keyboard</span><h2 id="offscreen-title">Still building.<br><em>Just with different pieces.</em></h2><p>There’s usually an AeroPress nearby and a LEGO build waiting for my attention. Add mechanical keyboards, a little philosophy, and a love for the tabla. Plenty to be curious about.</p><a class="underlined" href="{{ '/about/' | relative_url }}">More of the human side <span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="contact-section" aria-labelledby="contact-title"><p class="eyebrow">Leave a tab open for a conversation</p><h2 id="contact-title">Building something?<br><em>Let’s compare notes.</em></h2><a class="email-link" href="mailto:geekabhi@outlook.com">geekabhi@outlook.com <span aria-hidden="true">↗</span></a><div class="profile-links"><a href="https://github.com/abhishekmishragithub">GitHub ↗</a><a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn ↗</a><a href="https://x.com/stalwartcoder">X ↗</a><a href="https://dev.to/stalwartcoder">DEV ↗</a><a href="https://slides.com/abhishek-mishra">Slides ↗</a>{% if site.instagram_url %}<a href="{{ site.instagram_url }}">Instagram ↗</a>{% endif %}</div></section>
