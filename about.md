@@ -15,11 +15,15 @@ My work has taken me through developer tools, databases, and AI, including chapt
 
 ## People are part of the work.
 
-Open source brought me into communities that became much more than places to talk about code. I’ve helped with PyCon India, PyCon APAC, PyLadies Chennai, and other developer gatherings, as an organiser, speaker, mentor, and occasionally the person holding the mic.
+Open source brought me into communities that became much more than places to talk about code. I’ve helped organise [GDG Chennai](https://gdg.community.dev/gdg-chennai/) and PyCon India, alongside volunteering with PyCon APAC and PyLadies Chennai. In 2024, I led [PyCon India’s sponsorship working group](https://in.pycon.org/2024/about/). Sometimes the work is on stage; a lot of it happens before anyone walks into the room.
+
+I’m also building with [BLDR Collective](https://bldrcollective.com): workshops, build days, and getting curious people in a room to make something. At [BUILD Day Cochin](https://luma.com/eo83h85y), I co-hosted the event and led a workshop on building voice agents. It’s the same instinct that brought me into community work in the first place: learn something, then help someone else try it.
 
 In 2023, I was elected a [Python Software Foundation Fellow](https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html). It’s a connection to a community I care deeply about. Welcoming people into that community, especially those who haven’t always felt included in tech, matters to me.
 
 I enjoy mentoring, pair programming, and the conversation that starts after a talk. If you’re organising something, [let’s talk](mailto:geekabhi@outlook.com).
+
+You can find more of my gatherings on Luma under [@stalwartcoder](https://luma.com/user/stalwartcoder) and [@abhishek_](https://luma.com/user/abhishek_), or browse [talks and events in the index]({{ '/archive/' | relative_url }}?type=event).
 
 ## The other building blocks.
 

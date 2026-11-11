@@ -433,6 +433,32 @@ em {
   letter-spacing:.06em;
   color:inherit;
 }
+.community-links {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  margin:32px 0 40px;
+}
+.community-link {
+  padding-top:20px;
+  border-top:1px solid var(--line);
+}
+.community-link h3 {
+  font:24px/1.25 var(--serif);
+  margin:12px 0;
+  letter-spacing:-.02em;
+}
+.community-link h3 span {
+  font:16px var(--sans);
+}
+.community-link p {
+  font-size:12px;
+  line-height:1.8;
+  color:var(--muted);
+}
+.event-intro {
+  margin-bottom:16px;
+}
 .event-row {
   display:grid;
   grid-template-columns:70px 1fr 25px;
@@ -937,6 +963,10 @@ main:focus {
   }
 }
 @media(max-width:640px) {
+  .community-links {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
   .site-shell {
     padding:0 23px;
   }

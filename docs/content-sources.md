@@ -26,6 +26,13 @@ All destinations live in `_data/work.json`.
 
 ## Events and social
 
+- BLDR Collective: owner-supplied https://bldrcollective.com, opened and verified in the browser. Its programs include buildathons, product sprints, meetups, and workshops. https://luma.com/eo83h85y lists Abhishek's verified profile as a co-host and its agenda names him for the opening (Chief BLDR) and voice-agents workshop. Copy says "building with" rather than inventing a founder title. BUILD Day Cochin took place 1 November 2026 at Jain University Kochi.
+- GDG Chennai organiser history: confirmed by the owner and his LinkedIn biography. https://gdg.community.dev/gdg-chennai/ is the official chapter destination. https://gdg.community.dev/events/details/google-gdg-chennai-presents-regroup-reconnect-with-gdg-chennai/ explicitly lists him as a host. Exact event year omitted; no claim of current organiser tenure. An old Meetup URL could not be verified, so the official chapter is used.
+- PyCon India: https://in.pycon.org/2024/about/ explicitly names Abhishek Mishra as sponsorship working group lead. Earlier involvement is documented at https://in.pycon.org/2021/team/ and https://in.pycon.org/2020/sponsorship-prospectus.pdf .
+- GDG Cloud Chennai (a distinct chapter): official event pages https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-google-cloud-community-day-2022-chennai/ and https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-google-cloud-community-day-2023-chennai/ support speaker roles on 30 July 2022 and 13 May 2023. The chapter's https://github.com/GdgCloudChennai/presentation index corroborates the dates and sessions.
+- Both owner-supplied Luma profiles were inspected in the browser: https://luma.com/user/stalwartcoder and https://luma.com/user/abhishek_ . The public lists show hosted events and attendance totals, not a named list of attended events. Link both profiles; do not infer individual attendance, add the totals together, or treat hosting as speaking.
+- https://luma.com/i173i283 : 17 February 2026, speaker and co-host for "Why Small Models win?" at Bharat Mandapam. https://luma.com/mtg3ez2x : 20 February 2026, co-host for Yash Ghelani's Atoms session, not the speaker.
+- https://luma.com/hgk9vcu6 : co-host for the Entelligence.ai engineering-leaders dinner; 31 January 2026 from the public Luma profile. https://luma.com/gtiyl7et : co-host for W&B's RAG workshop on 18 January 2025; the sessions are attributed to Bharat and Manthan Gupta, not Abhishek.
 - Cloudways: https://luma.com/wpsxaszs names Abhishek at Smallest. 2026 is corroborated by the event listing and his Pipecat tutorial. No future appearance is promised.
 - Voxgig: episode 239, 18 February 2025, directly verified from episode page.
 - Temporal: https://slides.com/abhishek-mishra has the July 2025 GitHub/Temporal deck. Destination is explicitly labelled as a slides collection.
@@ -35,7 +42,7 @@ All destinations live in `_data/work.json`.
 
 ## Intentional limits
 
-The owner confirmed the Instagram handle `stalwartcoder` in this conversation. Both profile lists link to https://www.instagram.com/stalwartcoder/; no individual posts or imagery are reproduced without verification. No unsupported Kochi event entry, fabricated metrics, testimonials, live feeds, or claims of sole ownership of team projects are included. The 2025 résumé remains explicitly dated.
+The owner confirmed the Instagram handle `stalwartcoder` in this conversation; both Luma profiles also link to it. Both portfolio profile lists link to https://www.instagram.com/stalwartcoder/; no individual posts or imagery are reproduced without verification. No fabricated metrics, testimonials, live feeds, or claims of sole ownership of team projects are included. The 2025 résumé remains explicitly dated.
 
 ## Design references
 

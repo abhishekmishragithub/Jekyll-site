@@ -33,8 +33,13 @@ layout: default
 <section class="section-block" id="community" aria-labelledby="community-title">
   <div class="section-heading"><div><span class="eyebrow">03 / Better together</span><h2 id="community-title">Outside the editor<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=event">Talks & events <span aria-hidden="true">↗</span></a></div>
   <div class="community-intro"><p>Some of my favourite work happens in a room full of curious people. Talks, workshops, mentoring, and the people who make open source feel like home.</p><a class="fellow-stamp" href="https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html"><span class="tiny-label">Python Software Foundation</span><strong>Fellow, since 2023</strong><span class="tiny-label">For the community. With the community. ↗</span></a></div>
+  <div class="community-links">
+    {% assign communities = site.data.work | where: 'kind', 'community' | where: 'featured', true %}
+    {% for item in communities %}<a class="community-link" href="{{ item.url }}"><span class="tiny-label">{{ item.context }}</span><h3>{{ item.title }} <span aria-hidden="true">↗</span></h3><p>{{ item.description }}</p></a>{% endfor %}
+  </div>
+  <p class="eyebrow event-intro">A few rooms I’ve helped bring together</p>
   <div class="event-list">{% assign events = site.data.work | where: 'kind', 'event' | where: 'featured', true %}{% for item in events %}<a class="event-row" href="{{ item.url }}"><span class="event-year">{{ item.year }}</span><div><span class="tiny-label">{{ item.context }}</span><h3>{{ item.title }}</h3></div><span class="row-arrow" aria-hidden="true">↗</span></a>{% endfor %}</div>
-  <p class="community-footnote">Also part of the story: <a href="https://wiki.python.org/python/psf/PythonSoftwareFoundation/FellowNominations.html">PyCon India, PyCon APAC & PyLadies Chennai</a>, and <a href="https://forum.fossunited.org/t/indiafoss-3-0-documentation-request-for-volunteers-comment/2692">IndiaFOSS</a>.</p>
+  <p class="community-footnote">More gatherings on Luma: <a href="https://luma.com/user/stalwartcoder">@stalwartcoder</a> and <a href="https://luma.com/user/abhishek_">@abhishek_</a>. Also part of the story: <a href="https://wiki.python.org/python/psf/PythonSoftwareFoundation/FellowNominations.html">PyCon APAC & PyLadies Chennai</a>, and <a href="https://forum.fossunited.org/t/indiafoss-3-0-documentation-request-for-volunteers-comment/2692">IndiaFOSS</a>.</p>
 </section>
 <section class="section-block elsewhere-section" aria-labelledby="elsewhere-title">
   <div class="section-heading"><div><span class="eyebrow">04 / Around the internet</span><h2 id="elsewhere-title">A few loose threads<span class="accent">.</span></h2></div><a class="quiet-link" href="{{ '/archive/' | relative_url }}?type=social">More posts <span aria-hidden="true">↗</span></a></div>

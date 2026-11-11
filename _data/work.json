@@ -104,13 +104,132 @@
     "date": "2022-07-22"
   },
   {
+    "id": "bldr",
+    "kind": "community",
+    "title": "BLDR Collective",
+    "description": "Bringing builders together through workshops, build days, and shared experiments. I help host and teach along the way.",
+    "url": "https://bldrcollective.com",
+    "source": "BLDR Collective",
+    "context": "Building with the collective",
+    "featured": true
+  },
+  {
+    "id": "gdg-chennai",
+    "kind": "community",
+    "title": "GDG Chennai",
+    "description": "Part of my community-organising story: developer meetups, hosting, and helping people learn together.",
+    "url": "https://gdg.community.dev/gdg-chennai/",
+    "source": "Google Developer Groups",
+    "context": "Community organiser",
+    "featured": true
+  },
+  {
+    "id": "pycon-india",
+    "kind": "community",
+    "title": "PyCon India",
+    "description": "Years behind the scenes, including leading the sponsorship working group for PyCon India 2024.",
+    "url": "https://in.pycon.org/2024/about/",
+    "source": "PyCon India",
+    "context": "Sponsorship working group lead",
+    "year": "2024",
+    "featured": true
+  },
+  {
+    "id": "build-cochin",
+    "kind": "event",
+    "title": "BUILD Day Cochin",
+    "description": "Co-hosted a day of AI, hardware, and game development with BLDR Collective. Led the opening and a hands-on voice-agents workshop.",
+    "url": "https://luma.com/eo83h85y",
+    "source": "Luma",
+    "context": "Co-host & workshop speaker · BLDR Collective",
+    "date": "2026-11-01",
+    "year": "2026",
+    "featured": true
+  },
+  {
+    "id": "small-models",
+    "kind": "event",
+    "title": "Why small models win",
+    "description": "My session on specialised models and enterprise AI at Bharat Mandapam, New Delhi.",
+    "url": "https://luma.com/i173i283",
+    "source": "Luma",
+    "context": "Speaker & co-host · Smallest AI",
+    "date": "2026-02-17",
+    "year": "2026",
+    "featured": true
+  },
+  {
+    "id": "voice-speedrun",
+    "kind": "event",
+    "title": "Voice AI Speedrun: building agents with Atoms",
+    "description": "Co-hosted Yash Ghelani’s live voice-agent session at Bharat Mandapam, New Delhi.",
+    "url": "https://luma.com/mtg3ez2x",
+    "source": "Luma",
+    "context": "Co-host · Session by Yash Ghelani",
+    "date": "2026-02-20",
+    "year": "2026"
+  },
+  {
+    "id": "engineering-dinner",
+    "kind": "event",
+    "title": "AI for Engineering Leaders",
+    "description": "Co-hosted the Entelligence.ai launch dinner in Bengaluru, bringing engineering leaders and founders together.",
+    "url": "https://luma.com/hgk9vcu6",
+    "source": "Luma",
+    "context": "Co-host · Entelligence.ai launch dinner",
+    "date": "2026-01-31",
+    "year": "2026"
+  },
+  {
+    "id": "wandb-rag",
+    "kind": "event",
+    "title": "From simple to agentic RAG",
+    "description": "Co-hosted the W&B community workshop in Bengaluru, featuring sessions by Bharat and Manthan Gupta.",
+    "url": "https://luma.com/gtiyl7et",
+    "source": "Luma",
+    "context": "Co-host · Weights & Biases",
+    "date": "2025-01-18",
+    "year": "2025"
+  },
+  {
+    "id": "gdg-reconnect",
+    "kind": "event",
+    "title": "Regroup & Reconnect with GDG Chennai",
+    "description": "Hosted a gathering of the Chennai developer community, with conversations, talks, and reconnecting.",
+    "url": "https://gdg.community.dev/events/details/google-gdg-chennai-presents-regroup-reconnect-with-gdg-chennai/",
+    "source": "Google Developer Groups",
+    "context": "Host · GDG Chennai"
+  },
+  {
+    "id": "cloud-chennai-2023",
+    "kind": "event",
+    "title": "Real-time data APIs with Dozer",
+    "description": "A talk at Google Cloud Community Day Chennai on building real-time data APIs.",
+    "url": "https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-google-cloud-community-day-2023-chennai/",
+    "source": "GDG Cloud Chennai",
+    "context": "Speaker · Cloud Community Day",
+    "date": "2023-05-13",
+    "year": "2023"
+  },
+  {
+    "id": "cloud-chennai-2022",
+    "kind": "event",
+    "title": "Reliability and availability in modern data management",
+    "description": "A talk at Google Cloud Community Day Chennai on reliable, available data systems.",
+    "url": "https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-google-cloud-community-day-2022-chennai/",
+    "source": "GDG Cloud Chennai",
+    "context": "Speaker · Cloud Community Day",
+    "date": "2022-07-30",
+    "year": "2022"
+  },
+  {
     "id": "cloudways",
     "kind": "event",
     "title": "Voice AI agents: from demo to production",
     "description": "A practical session at the Cloudways Prepathon Builder Meetup in Bengaluru.",
     "url": "https://luma.com/wpsxaszs",
     "source": "Luma",
-    "context": "Cloudways Prepathon · Bengaluru",
+    "context": "Speaker · Cloudways Prepathon · Bengaluru",
     "year": "2026",
     "featured": true
   },
@@ -121,7 +240,7 @@
     "description": "On developer playgrounds, communities, and bringing an engineering background to developer relations.",
     "url": "https://www.voxgig.com/podcast/abhishek-mishra-devrel-engineer-tune-ai",
     "source": "Voxgig",
-    "context": "Podcast · Episode 239",
+    "context": "Podcast guest · Episode 239",
     "date": "2025-02-18",
     "year": "2025",
     "featured": true
@@ -136,7 +255,7 @@
     "context": "Talk · Slides collection",
     "date": "2025-07-17",
     "year": "2025",
-    "featured": true
+    "featured": false
   },
   {
     "id": "psf",

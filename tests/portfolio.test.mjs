@@ -5,6 +5,7 @@ import { normalize, matchesItem, readFilters, remainingSeconds, formatTime } fro
 const work = JSON.parse(readFileSync(new URL('../_data/work.json', import.meta.url)));
 test('every curated entry has a unique identity and a secure, real destination', () => {
   assert.equal(new Set(work.map(item => item.id)).size, work.length);
+  assert.equal(new Set(work.map(item => item.url)).size, work.length, 'shared events across profiles must not be duplicated');
   const kinds = ['project', 'writing', 'event', 'community', 'social'];
   for (const item of work) {
     assert.ok(item.title && item.description && item.context && item.source);
@@ -31,6 +32,8 @@ test('real content filters show distinct project, social, and empty-result sets'
   assert.equal(find('social', 'hackathon').length, 2);
   assert.equal(find('writing', 'not-a-real-term').length, 0);
   assert.equal(find('all', '').length, work.length);
+  assert.deepEqual(find('event', 'co-host').map(item => item.id).sort(), ['build-cochin', 'engineering-dinner', 'small-models', 'voice-speedrun', 'wandb-rag']);
+  assert.deepEqual(find('community', 'sponsorship').map(item => item.id), ['pycon-india']);
 });
 test('coffee timer uses wall-clock time after delayed/background ticks and never goes negative', () => {
   assert.equal(remainingSeconds(121000, 1000), 120);
