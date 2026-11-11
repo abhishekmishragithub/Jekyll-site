@@ -35,7 +35,7 @@ All destinations live in `_data/work.json`.
 
 ## Intentional limits
 
-Instagram identity could not be verified. A configuration hook is ready, but there is no invented handle or borrowed imagery. No unsupported Kochi event entry, fabricated metrics, testimonials, live feeds, or claims of sole ownership of team projects are included. The 2025 résumé remains explicitly dated.
+The owner confirmed the Instagram handle `stalwartcoder` in this conversation. Both profile lists link to https://www.instagram.com/stalwartcoder/; no individual posts or imagery are reproduced without verification. No unsupported Kochi event entry, fabricated metrics, testimonials, live feeds, or claims of sole ownership of team projects are included. The 2025 résumé remains explicitly dated.
 
 ## Design references
 

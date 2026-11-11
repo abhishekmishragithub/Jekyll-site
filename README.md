@@ -18,7 +18,7 @@ The site is at `http://127.0.0.1:4000`. For a static build, run `bundle exec jek
 
 Edit `_data/work.json`. Each entry has a unique `id`, a `kind` (`project`, `writing`, `event`, `community`, or `social`), `title`, `description`, `url`, `source`, and `context`. Optional `date` uses `YYYY-MM-DD`; use `year` when only the year is verified. `featured: true` includes an entry in its homepage section. Featured projects also have an `icon` (`wave`, `link`, `terminal`). Ordering is curated, not automatically chronological.
 
-Use original destinations and verify identity and attribution. See [content provenance](docs/content-sources.md). For Instagram, set `instagram_url` in `_config.yml` after the account is confirmed; it appears in both profile lists. No handle is guessed.
+Use original destinations and verify identity and attribution. See [content provenance](docs/content-sources.md). The owner-confirmed Instagram profile is configured through `instagram_url` in `_config.yml` and appears in both profile lists.
 
 ## Layout and behaviour
 

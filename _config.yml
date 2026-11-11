@@ -9,6 +9,7 @@ repo: https://github.com/abhishekmishragithub/Jekyll-site # site repo [optional]
 mode: light # default theme "dark" | "light"
 
 # Profile settings
+instagram_url: https://www.instagram.com/stalwartcoder/
 author:
   name: Abhishek Mishra # author name
   bio: >- # tell to the world
