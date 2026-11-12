@@ -1,0 +1,8 @@
+[build]
+  command = "sh scripts/ci.sh"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.3.13"
+  NODE_VERSION = "22"
+  JEKYLL_ENV = "production"

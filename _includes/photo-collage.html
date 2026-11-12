@@ -1,0 +1,6 @@
+<div class="photo-collage{% if site.data.photos.size == 1 %} photo-collage-single{% endif %}" aria-label="Photos from my life">
+  {% for photo in site.data.photos %}
+  <figure class="photo-print"><img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" width="{{ photo.width }}" height="{{ photo.height }}"{% unless forloop.first %} loading="lazy"{% endunless %}><figcaption>{{ photo.caption | escape }}</figcaption></figure>
+  {% endfor %}
+  <div class="collage-note"><span class="note">Currently in Bengaluru.</span><p>Usually with a coffee,<br> a half-built LEGO set,<br> or too many tabs open.</p><svg viewBox="0 0 100 50" width="90" height="45" aria-hidden="true"><path d="M90 5Q65 42 8 25m0 0 16-4M8 25l13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+</div>

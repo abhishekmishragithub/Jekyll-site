@@ -1,14 +1,51 @@
 ---
 layout: default
-home: true
 ---
-
-<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-{%- for post in site.posts limit: site.number_of_posts -%}
-<article class="post-item">
-  <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
-  <h4 class="post-item-title">
-    <a href="{{ post.permalink }}">{{ post.title | escape }}</a>
-  </h4>
-</article>
-{%- endfor -%}
+<section class="intro-section journal-intro" aria-labelledby="intro-title">
+  <div class="intro-copy">
+    <p class="name-greeting">Hello from<svg viewBox="0 0 45 36" aria-hidden="true"><path d="M3 4Q35 0 34 30m-7-7 7 7 5-9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+    <h1 id="intro-title"><span class="sr-only">Abhishek Mishra</span>{% include name-lettering.html %}<span class="note nickname">or, just Tofu.</span></h1>
+    <p>I’m an engineer in developer relations at <a href="https://smallest.ai">Smallest AI</a>. I write Python, build with voice AI, and help other developers get their ideas working.</p>
+    <p>Outside that: <a href="https://bldrcollective.com">BLDR Collective</a>, community gatherings, a growing interest in manual-brew coffee, and LEGO.</p>
+    <p class="intro-invitation">Have a look around. I’ll put the coffee on.</p>
+    <div class="intro-links"><a href="{{ site.linkedin_url }}">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">→</span></a></div>
+  </div>
+  {% include desk.html %}
+</section>
+<div class="journal-divider" aria-hidden="true"><span>from my desk</span><i></i><span>↓</span></div>
+<section class="home-section" id="work" aria-labelledby="work-title">
+  <h2 id="work-title">Things I’ve worked on</h2>
+  <div class="work-list">
+    {% assign projects = site.data.work | where: 'kind', 'project' | where: 'featured', true %}
+    {% for item in projects %}<div class="work-item"><h3><a href="{{ item.url }}">{{ item.title }} <span class="external" aria-hidden="true">↗</span></a></h3><p>{{ item.description | escape }}</p></div>{% endfor %}
+  </div>
+  <a class="more-link" href="{{ '/archive/' | relative_url }}?type=project">More on GitHub & elsewhere <span aria-hidden="true">→</span></a>
+</section>
+<section class="home-section" id="writing" aria-labelledby="writing-title">
+  <h2 id="writing-title">Writing</h2>
+  <div class="reading-list">
+    {% assign writing = site.data.work | where: 'kind', 'writing' | where: 'featured', true %}
+    {% for item in writing %}<a class="reading-row" href="{{ item.url }}"><span>{{ item.title }} <span class="external" aria-hidden="true">↗</span></span><span class="row-meta">{{ item.source }}</span></a>{% endfor %}
+  </div>
+  <a class="more-link" href="{{ '/archive/' | relative_url }}?type=writing">All writing <span aria-hidden="true">→</span></a>
+</section>
+<section class="home-section" id="community" aria-labelledby="community-title">
+  <h2 id="community-title">People & places</h2>
+  <p>I’ve organised with <a href="https://gdg.community.dev/gdg-chennai/">GDG Chennai</a>, led the <a href="https://in.pycon.org/2024/about/">PyCon India 2024 sponsorship team</a>, and volunteered with PyCon APAC, PyLadies Chennai, and IndiaFOSS. I became a <a href="https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html">PSF Fellow in 2023</a>.</p>
+  <p>Lately, there have been build days and voice AI workshops with BLDR. A few recent rooms:</p>
+  <div class="reading-list event-list">
+    {% assign events = site.data.work | where: 'kind', 'event' | where: 'featured', true %}
+    {% for item in events limit: 3 %}<a class="reading-row" href="{{ item.url }}"><span>{{ item.title }} <span class="external" aria-hidden="true">↗</span><small>{{ item.context }}</small></span><span class="row-meta">{{ item.year }}</span></a>{% endfor %}
+  </div>
+  <a class="more-link" href="{{ '/archive/' | relative_url }}?type=event">Talks, events & recordings <span aria-hidden="true">→</span></a>
+</section>
+<section class="home-section off-clock" aria-labelledby="coffee-title">
+  <h2 id="coffee-title">Away from the screen</h2>
+  <div class="off-clock-content"><p>Coffee is one of my favourite rabbit holes. I brew with an AeroPress; I also build LEGO, tinker with mechanical keyboards, and play tabla.</p><a class="note" href="{{ '/about/' | relative_url }}">a few more things about me →</a></div>
+</section>
+<section class="home-section elsewhere" aria-labelledby="elsewhere-title">
+  <h2 id="elsewhere-title">Elsewhere</h2>
+  <p>Code on <a href="https://github.com/abhishekmishragithub">GitHub</a>, notes on <a href="https://dev.to/stalwartcoder">DEV</a>, conversations on <a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn</a> and <a href="https://x.com/stalwartcoder">X</a>, and bits of life on <a href="{{ site.instagram_url }}">Instagram</a>.</p>
+  <p>For a workshop, a collaboration, or just a hello:<br><a href="{{ site.linkedin_url }}">Connect with me on LinkedIn ↗</a><br><span class="contact-address">Or email: {{ site.contact_email_display | escape }}</span></p>
+  <a class="more-link" href="{{ '/archive/' | relative_url }}">The full index <span aria-hidden="true">→</span></a>
+</section>

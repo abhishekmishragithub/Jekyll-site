@@ -1,24 +1,25 @@
 # Site settings
 title: Abhishek Mishra # site title
 description: >- # site description
-  A website for Abhishek Mishra, developer advocate for the YugabyteDB database.
+  Abhishek Mishra — Bengaluru-based engineer in developer relations, building voice AI and Python communities. Projects, writing, talks, and a few things beyond the keyboard.
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 image: assets/img/avatar.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/abhishekmishragithub/Jekyll-site # site repo [optional]
-mode: dark # default theme "dark" | "light"
+mode: light # default theme "dark" | "light"
 
 # Profile settings
+linkedin_url: https://www.linkedin.com/in/stalwartcoder/
+contact_email_display: "abhishekmishra[at]duck[dot]com"
+instagram_url: https://www.instagram.com/stalwartcoder/
 author:
   name: Abhishek Mishra # author name
   bio: >- # tell to the world
-    Hello Folks, I am Abhishek from Mumbai, India, working as a Developer Advocate for the YugabyteDB, a distributed SQL database startup.
-    Checkout /about to know more.
+    Engineer in developer relations at Smallest AI. Python Software Foundation Fellow. Building things and bringing people together.
   username: stalwartcoder # general username
   github: abhishekmishragithub # github username
   twitter: stalwartcoder # twitter username
   facebook: stalwartcoder # facebook username
-  email: geekabhi[at]outlook[dot]com # email adress
   avatar: /assets/img/avatar.png # change with your own avatar
 
 # URL settings
@@ -71,7 +72,16 @@ include:
   - .htaccess
 
 exclude:
-  - CNAME
+  - assets/portfolio/brew-sequence.png
+  - netlify.toml
+  - .bundle
+  - .openai
+  - docs
+  - scripts
+  - tests
+  - vendor
+  - package.json
+  - package-lock.json
   - Gemfile
   - Gemfile.lock
   - LICENSE
