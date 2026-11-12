@@ -1,3 +1,15 @@
+# Current brewing scene and name lettering
+
+The homepage now uses an original code-native SVG illustration in `_includes/desk.html`. Its arms, hands, body, head, brewer, plunger and cup are separate parts. `assets/js/coffee-motion.mjs` interpolates their positions on requestAnimationFrame over a finite 10.4-second sequence: press, release, lift the brewer vertically, move it aside, set it down, pick up the cup, sip, and lower it slightly. The pressing palm stays attached to the plunger; the holding hand follows the brewer; the cup hand follows the handle through the sip. There is no raster frame swapping or autoplay. Reduced motion immediately shows the final pose. Without JavaScript the initial drawing remains visible.
+
+The character is illustrative, not a portrait of Abhishek. A face reference is deferred at the owner’s request. `_includes/name-lettering.html` contains original SVG pen paths spelling Abhishek Mishra; this is a decorative handwritten wordmark, not a reproduction of his actual signature. The heading retains screen-reader text.
+
+The earlier PNG/WebP assets remain in source history but are excluded from the generated site.
+
+---
+
+## Previous flipbook provenance
+
 # Brewing illustration
 
 Source asset: `assets/portfolio/brew-sequence.png` (2172 × 724 pixels, RGBA PNG).

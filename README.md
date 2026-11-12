@@ -23,10 +23,12 @@ Use original destinations and verify identity and attribution. See [content prov
 ## Layout and behaviour
 
 - `_layouts/home.html`: homepage sections.
-- `_includes/desk.html`: original illustrated AeroPress flipbook and its accessible brew button.
+- `_includes/desk.html`: articulated SVG AeroPress scene and its accessible brew button.
 - `assets/css/portfolio.css`: responsive design, reduced-motion and print styles. Self-hosted Geist for reading and Caveat for handwritten notes (SIL Open Font licenses in `assets/fonts/`), with system fallbacks. No gradients.
 - `assets/js/portfolio.js`: progressively enhanced controls. Without JS all index entries and navigation remain available.
 - `assets/js/portfolio-core.mjs`: shared search logic.
+- `assets/js/coffee-motion.mjs`: continuous brewing poses and the accessible animation controller.
+- `_includes/name-lettering.html`: original pen-path name lettering.
 - `about.md`, `archive.html`: biography and complete index.
 - `_posts/`: original article content, with local permalinks and explicit external source links.
 
@@ -47,7 +49,7 @@ Netlify runs `sh scripts/ci.sh` before publishing: focused tests, production bui
 
 This branch is a reviewable rebuild. It does not change DNS or auto-deploy the custom domain. Netlify uses the checked-in build configuration. Other static hosts should select Ruby 3.3.13, install the locked gems, run `bundle exec jekyll build`, and publish `_site`. An explicit `RUBY_VERSION` in a hosting dashboard may override `.ruby-version` and must agree with the repository pin. A separate owner-private Sites preview is built from the same source; its hosting identity is kept outside this public repository.
 
-The original Klisé source and its MIT license are retained. The new layout is a coffee journal with restrained handwritten annotations. The original four-frame brewing illustration was generated with the built-in image-generation tool; prompt and provenance are in `docs/illustration-notes.md`.
+The original Klisé source and its MIT license are retained. The new layout is a coffee journal with restrained handwritten annotations. The brewing scene is an original articulated SVG drawing with continuous joint motion. The name is custom SVG pen lettering, with accessible text retained. The previous generated flipbook is retained only as source history; provenance is in `docs/illustration-notes.md`.
 
 ## Personal photos
 

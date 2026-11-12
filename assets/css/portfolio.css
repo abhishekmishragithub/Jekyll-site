@@ -607,17 +607,6 @@ td {
   gap: 52px;
   align-items: center;
 }
-.location-note {
-  font-family: Caveat, cursive;
-  font-size: 23px;
-  color: #7e705e;
-  margin-bottom: 18px;
-  transform: rotate(-2deg);
-  transform-origin: left;
-}
-.location-note span {
-  color: var(--link);
-}
 .journal-intro h1 {
   font-size: 30px;
   font-weight: 550;
@@ -659,19 +648,12 @@ td {
   transform: rotate(5deg);
   z-index: 1;
 }
-.brew-window {
-  width: 100%;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  mix-blend-mode: multiply;
-}
-.brew-strip {
-  display: block;
-  width: 400%;
-  max-width: none;
-  height: auto;
-  will-change: transform;
-}
+.brew-scene { width: 100%; height: auto; overflow: visible; }
+.brew-arm-outline, .brew-arm-sleeve, .brew-forearm { fill: none; }
+.brew-arm-outline { stroke: #493b32; stroke-width: 32; }
+.brew-arm-sleeve { stroke: #b97252; stroke-width: 28; }
+.brew-forearm { stroke: #e3ba94; stroke-width: 19; }
+.name-lettering { width: 100%; max-width: 430px; height: auto; transform: rotate(-2deg); }
 .brew-button {
   font-family: Caveat, cursive;
   font-size: 24px;
@@ -695,26 +677,6 @@ td {
   font-size: 11px;
   color: var(--muted);
   min-height: 19px;
-}
-.coffee-corner[data-state="brewing"] .brew-strip {
-  animation: brew-story 5.2s steps(1, end) forwards;
-}
-.coffee-corner[data-state="done"] .brew-strip {
-  transform: translateX(-75%);
-}
-@keyframes brew-story {
-  0% {
-    transform: translateX(0);
-  }
-  28% {
-    transform: translateX(-25%);
-  }
-  62% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-75%);
-  }
 }
 .journal-divider {
   margin: 54px 0 52px;
@@ -961,9 +923,6 @@ td {
 @media print {
   .brew-button {
     display: none;
-  }
-  .brew-strip {
-    will-change: auto;
   }
   .home-section {
     break-inside: avoid;

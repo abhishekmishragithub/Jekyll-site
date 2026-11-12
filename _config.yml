@@ -72,6 +72,7 @@ include:
 
 exclude:
   - assets/portfolio/brew-sequence.png
+  - assets/portfolio/brew-sequence.webp
   - netlify.toml
   - .bundle
   - .openai
