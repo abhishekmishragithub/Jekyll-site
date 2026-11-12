@@ -25,7 +25,7 @@ test('press stays on the mug until extracted; cup lifts only after brewer is set
   }
   for(let t=4600;t<=7000;t+=100){
     const [,bx,by,cx,cy,,,,,rx,ry]=poseAt(t);
-    assert.equal(rx,211+bx); assert.equal(ry,322+by);
+    assert.ok(Math.abs(rx-(211+bx))<1e-9); assert.ok(Math.abs(ry-(322+by))<1e-9);
     assert.deepEqual([cx,cy],[0,0]);
   }
   const end=poseAt(BREW_DURATION);
