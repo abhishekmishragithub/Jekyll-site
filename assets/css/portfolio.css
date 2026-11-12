@@ -928,3 +928,8 @@ td {
     break-inside: avoid;
   }
 }
+
+.motion-choice { display: block; font-size: 11px; color: var(--muted); margin-top: 5px; }
+.motion-choice[hidden] { display: none; }
+.motion-choice button { padding: 2px 0; border: 0; background: none; color: var(--link); font-size: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.motion-choice button:disabled { color: var(--muted); }

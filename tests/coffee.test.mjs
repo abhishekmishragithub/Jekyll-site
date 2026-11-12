@@ -7,13 +7,15 @@ function setup(reduced = false) {
   let id = 0;
   const button = { hidden: true, disabled: false, addEventListener: (e, f) => listeners[e] = f };
   const status = { textContent: '' };
+  const motionChoice = {hidden:true};
+  const motionButton = {disabled:false,addEventListener:(_,fn)=>listeners.playMotion=fn};
   const names = ['body','head','press','plunger','cup','left-hand','right-hand','left-outline','right-outline','left-sleeve','right-sleeve','left-skin','right-skin','steam'];
   const parts = Object.fromEntries(names.map(name => [name, { dataset: { brew:name }, attrs:{}, setAttribute(k,v){this.attrs[k]=v;} }]));
-  const coffee = { dataset: {state:'ready'}, querySelector: s=>s==='#brew-button'?button:status, querySelectorAll:()=>Object.values(parts) };
+  const coffee = { dataset: {state:'ready'}, querySelector: s=>({'#brew-button':button,'#brew-status':status,'#brew-motion-choice':motionChoice,'#brew-motion':motionButton})[s], querySelectorAll:()=>Object.values(parts) };
   const motion = { matches:reduced, addEventListener:(_,f)=>listeners.motion=f };
   mountCoffee(coffee, {motion, requestFrame:fn=>{ frames.set(++id,fn); return id; }, cancelFrame:id=>frames.delete(id)});
   const advance = time => { const pending=[...frames.values()]; frames.clear(); pending.forEach(fn=>fn(time)); };
-  return {coffee,button,status,parts,motion,listeners,frames,advance};
+  return {coffee,button,status,parts,motion,motionChoice,motionButton,listeners,frames,advance};
 }
 test('press stays on the mug until extracted; cup lifts only after brewer is set aside',()=>{
   for (let t=0;t<=4000;t+=100) {
@@ -61,4 +63,13 @@ test('reduced motion finishes immediately and cancels a running frame',()=>{
   changing.motion.matches=true; changing.listeners.motion();
   assert.equal(changing.coffee.dataset.state,'done');assert.equal(changing.frames.size,0);
   assert.equal(changing.button.disabled,false);
+});
+
+test('reduced-motion users can explicitly opt into one full animation',()=>{
+  const s=setup(true); assert.equal(s.motionChoice.hidden,false);
+  s.listeners.playMotion(); assert.equal(s.coffee.dataset.state,'brewing'); assert.equal(s.motionButton.disabled,true);
+  s.advance(0); s.advance(BREW_DURATION);
+  assert.equal(s.coffee.dataset.state,'done'); assert.equal(s.motionButton.disabled,false);
+  s.listeners.click(); assert.equal(s.frames.size,0); // Normal control still respects preference.
+  s.motion.matches=false; s.listeners.motion(); assert.equal(s.motionChoice.hidden,true);
 });

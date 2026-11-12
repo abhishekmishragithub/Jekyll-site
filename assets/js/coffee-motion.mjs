@@ -56,6 +56,8 @@ export function drawPose(parts, time) {
 export function mountCoffee(coffee, { motion, requestFrame, cancelFrame }) {
   const button = coffee.querySelector('#brew-button');
   const status = coffee.querySelector('#brew-status');
+  const motionChoice = coffee.querySelector('#brew-motion-choice');
+  const motionButton = coffee.querySelector('#brew-motion');
   const parts = Object.fromEntries([...coffee.querySelectorAll('[data-brew]')].map(el => [el.dataset.brew, el]));
   let frame = null, start = null;
   function finish() {
@@ -64,6 +66,7 @@ export function mountCoffee(coffee, { motion, requestFrame, cancelFrame }) {
     drawPose(parts, BREW_DURATION);
     coffee.dataset.state = 'done';
     button.disabled = false;
+    motionButton.disabled = false;
     button.textContent = 'Another cup? ↻';
     status.textContent = 'That’s better. Enjoy your cup.';
   }
@@ -76,20 +79,25 @@ export function mountCoffee(coffee, { motion, requestFrame, cancelFrame }) {
   }
   drawPose(parts, 0);
   button.hidden = false;
-  button.addEventListener('click', () => {
+  motionChoice.hidden = !motion.matches;
+  function play(allowMotion = false) {
     if (coffee.dataset.state === 'brewing') return;
     coffee.dataset.state = 'brewing';
     button.disabled = true;
+    motionButton.disabled = true;
     button.textContent = 'Easy does it…';
     status.textContent = 'Press, lift, and a little pause for coffee.';
     start = null;
-    if (motion.matches) finish();
+    if (motion.matches && !allowMotion) finish();
     else {
       drawPose(parts, 0);
       frame = requestFrame(tick);
     }
-  });
+  }
+  button.addEventListener('click', () => play());
+  motionButton.addEventListener('click', () => play(true));
   motion.addEventListener('change', () => {
+    motionChoice.hidden = !motion.matches;
     if (motion.matches && coffee.dataset.state === 'brewing') finish();
   });
 }

@@ -32,7 +32,7 @@ Use original destinations and verify identity and attribution. See [content prov
 - `about.md`, `archive.html`: biography and complete index.
 - `_posts/`: original article content, with local permalinks and explicit external source links.
 
-Search state is reflected in `?type=writing&q=python`. Nothing is stored in a browser database. The coffee illustration plays once on request, then offers replay. Reduced-motion users get the finished cup immediately; changing that preference during a brew completes it. The illustration stays visible without JavaScript. Social posts are regular links, with no tracking embeds or live-feed promises.
+Search state is reflected in `?type=writing&q=python`. Nothing is stored in a browser database. The coffee illustration plays once on request, then offers replay. Reduced-motion users get the finished cup immediately, with a separate “Play full animation” opt-in; changing that preference during a brew completes it. The illustration stays visible without JavaScript. Social posts are regular links, with no tracking embeds or live-feed promises.
 
 ## Verify
 
