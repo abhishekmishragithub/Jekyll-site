@@ -23,7 +23,7 @@ I’m also building with [BLDR Collective](https://bldrcollective.com): workshop
 
 In 2023, I was elected a [Python Software Foundation Fellow](https://pyfound.blogspot.com/2023/08/announcing-python-software-foundation.html). It’s a connection to a community I care deeply about. Welcoming people into that community, especially those who haven’t always felt included in tech, matters to me.
 
-I enjoy mentoring, pair programming, and the conversation that starts after a talk. If you’re organising something, [let’s talk](mailto:geekabhi@outlook.com).
+I enjoy mentoring, pair programming, and the conversation that starts after a talk. If you’re organising something, [connect with me on LinkedIn]({{ site.linkedin_url }}).
 
 You can find more of my gatherings on Luma under [@stalwartcoder](https://luma.com/user/stalwartcoder) and [@abhishek_](https://luma.com/user/abhishek_), or browse [talks and events in the index]({{ '/archive/' | relative_url }}?type=event).
 
@@ -33,6 +33,8 @@ Coffee is a bit of a rabbit hole. The AeroPress is part of it. So are LEGO, mech
 
 ## Around the internet
 
-<div class="about-links"><a href="https://github.com/abhishekmishragithub">GitHub ↗</a><a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn ↗</a><a href="https://x.com/stalwartcoder">X ↗</a><a href="https://dev.to/stalwartcoder">DEV ↗</a><a href="https://slides.com/abhishek-mishra">Slides ↗</a>{% if site.instagram_url %}<a href="{{ site.instagram_url }}">Instagram ↗</a>{% endif %}<a href="mailto:geekabhi@outlook.com">Email ↗</a></div>
+<div class="about-links"><a href="https://github.com/abhishekmishragithub">GitHub ↗</a><a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn ↗</a><a href="https://x.com/stalwartcoder">X ↗</a><a href="https://dev.to/stalwartcoder">DEV ↗</a><a href="https://slides.com/abhishek-mishra">Slides ↗</a>{% if site.instagram_url %}<a href="{{ site.instagram_url }}">Instagram ↗</a>{% endif %}</div>
 
 [Browse my work]({{ '/archive/' | relative_url }}) · [Résumé (2025 PDF)]({{ '/assets/misc/Abhishek_Mishra_Resume_v2_2025.pdf' | relative_url }})
+
+<p class="contact-address">Prefer email? {{ site.contact_email_display | escape }}</p>

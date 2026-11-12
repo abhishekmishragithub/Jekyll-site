@@ -9,6 +9,8 @@ repo: https://github.com/abhishekmishragithub/Jekyll-site # site repo [optional]
 mode: light # default theme "dark" | "light"
 
 # Profile settings
+linkedin_url: https://www.linkedin.com/in/stalwartcoder/
+contact_email_display: "abhishekmishra[at]duck[dot]com"
 instagram_url: https://www.instagram.com/stalwartcoder/
 author:
   name: Abhishek Mishra # author name
@@ -18,7 +20,6 @@ author:
   github: abhishekmishragithub # github username
   twitter: stalwartcoder # twitter username
   facebook: stalwartcoder # facebook username
-  email: geekabhi@outlook.com # email adress
   avatar: /assets/img/avatar.png # change with your own avatar
 
 # URL settings

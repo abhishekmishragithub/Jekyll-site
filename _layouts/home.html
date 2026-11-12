@@ -3,11 +3,12 @@ layout: default
 ---
 <section class="intro-section journal-intro" aria-labelledby="intro-title">
   <div class="intro-copy">
+    <p class="name-greeting">Hello from<svg viewBox="0 0 45 36" aria-hidden="true"><path d="M3 4Q35 0 34 30m-7-7 7 7 5-9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
     <h1 id="intro-title"><span class="sr-only">Abhishek Mishra</span>{% include name-lettering.html %}<span class="note nickname">or, just Tofu.</span></h1>
     <p>I’m an engineer in developer relations at <a href="https://smallest.ai">Smallest AI</a>. I write Python, build with voice AI, and help other developers get their ideas working.</p>
     <p>Outside that: <a href="https://bldrcollective.com">BLDR Collective</a>, community gatherings, a growing interest in manual-brew coffee, and LEGO.</p>
     <p class="intro-invitation">Have a look around. I’ll put the coffee on.</p>
-    <div class="intro-links"><a href="mailto:geekabhi@outlook.com">Say hello <span aria-hidden="true">↗</span></a><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">→</span></a></div>
+    <div class="intro-links"><a href="{{ site.linkedin_url }}">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">→</span></a></div>
   </div>
   {% include desk.html %}
 </section>
@@ -45,6 +46,6 @@ layout: default
 <section class="home-section elsewhere" aria-labelledby="elsewhere-title">
   <h2 id="elsewhere-title">Elsewhere</h2>
   <p>Code on <a href="https://github.com/abhishekmishragithub">GitHub</a>, notes on <a href="https://dev.to/stalwartcoder">DEV</a>, conversations on <a href="https://www.linkedin.com/in/stalwartcoder/">LinkedIn</a> and <a href="https://x.com/stalwartcoder">X</a>, and bits of life on <a href="{{ site.instagram_url }}">Instagram</a>.</p>
-  <p>For a workshop, a collaboration, or just a hello:<br><a href="mailto:geekabhi@outlook.com">geekabhi@outlook.com</a></p>
+  <p>For a workshop, a collaboration, or just a hello:<br><a href="{{ site.linkedin_url }}">Connect with me on LinkedIn ↗</a><br><span class="contact-address">Or email: {{ site.contact_email_display | escape }}</span></p>
   <a class="more-link" href="{{ '/archive/' | relative_url }}">The full index <span aria-hidden="true">→</span></a>
 </section>

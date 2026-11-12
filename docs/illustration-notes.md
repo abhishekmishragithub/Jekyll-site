@@ -2,7 +2,7 @@
 
 At the owner’s request, restore the original character sheet and 5.2-second four-frame brewing sequence from commit `6c14361`. Remove the later articulated SVG character and its motion controller. Keep the custom name lettering in `_includes/name-lettering.html`, with accessible heading text. All other type uses Geist.
 
-The site now uses a white/black/gray theme. CSS presents the original artwork and portrait in grayscale without changing the source image files. The old sequence is intentionally a flipbook, not continuous limb animation. Reduced-motion users see the final cup immediately after activation. No face personalization has been attempted; the owner will supply reference photos in a later revision.
+The site now uses a white/black/gray theme. CSS presents the original artwork and portrait in grayscale without changing the source image files. The old sequence is intentionally a flipbook, not continuous limb animation. Automatic playback advances four still frames over 5.2 seconds. Reduced-motion users advance one still pose per click, with replay returning to the first pose. Enabling reduced motion during playback cancels timers and preserves the visible pose. No face personalization has been attempted; the owner will supply reference photos in a later revision.
 
 ## Original image provenance
 

@@ -69,6 +69,17 @@ work = json.loads(Path('_data/work.json').read_text())
 archive = (root / 'archive/index.html').read_text()
 for item in work:
     if item['url'] not in archive: errors.append(f'Index lost {item["id"]}')
+# Contact details must stay obfuscated in rendered pages and feeds.
+for path in list(root.rglob('*.html')) + list(root.rglob('*.xml')):
+    rendered = path.read_text()
+    if 'geekabhi@outlook.com' in rendered or 'abhishekmishra@duck.com' in rendered:
+        errors.append(f'{path.relative_to(root)}: obsolete or unobfuscated email contact')
+for name in ['index.html', 'about/index.html']:
+    rendered = (root / name).read_text()
+    if 'abhishekmishra[at]duck[dot]com' not in rendered:
+        errors.append(f'{name}: missing obfuscated contact address')
+    if 'https://www.linkedin.com/in/stalwartcoder/' not in rendered:
+        errors.append(f'{name}: missing LinkedIn contact')
 if errors:
     print('\n'.join(errors))
     sys.exit(1)

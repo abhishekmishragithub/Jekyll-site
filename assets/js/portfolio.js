@@ -63,28 +63,58 @@ if (coffee) {
   const button = document.querySelector("#brew-button");
   const status = document.querySelector("#brew-status");
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
-  let timeout;
-  function finish() {
-    clearTimeout(timeout);
-    coffee.dataset.state = "done";
-    button.disabled = false;
-    button.textContent = "Another cup? ↻";
-    status.textContent = "That’s better. Enjoy your cup.";
+  let timers = [];
+  let frame = 0;
+  const poses = [
+    ["Brew with me ↓", "An illustrated coffee break."],
+    ["Finish the press →", "A little patience for the press."],
+    ["Pick up the cup →", "Coffee’s ready. Time for a sip."],
+    ["Another cup? ↻", "That’s better. Enjoy your cup."],
+  ];
+  function clearTimers() {
+    timers.forEach(clearTimeout);
+    timers = [];
   }
+  function showFrame(next) {
+    frame = next;
+    coffee.dataset.frame = String(frame);
+  }
+  function showStill(next) {
+    showFrame(next);
+    coffee.dataset.state = frame === 3 ? "done" : frame === 0 ? "ready" : "stepping";
+    button.disabled = false;
+    [button.textContent, status.textContent] = poses[frame];
+  }
+  function finish() {
+    clearTimers();
+    showStill(3);
+  }
+  showStill(0);
   button.hidden = false;
   button.addEventListener("click", () => {
     if (coffee.dataset.state === "brewing") return;
-    coffee.dataset.state = "ready";
-    // Commit the reset before replaying the finite CSS animation.
-    void coffee.offsetWidth;
+    clearTimers();
+    if (motion.matches) {
+      // No automatic movement: every activation selects a different still.
+      // In particular, replay returns to the first pose instead of the same cup.
+      showStill((frame + 1) % poses.length);
+      return;
+    }
+    showFrame(0);
     coffee.dataset.state = "brewing";
     button.disabled = true;
     button.textContent = "Easy does it…";
     status.textContent = "A little patience for the press.";
-    if (motion.matches) finish();
-    else timeout = setTimeout(finish, 5200);
+    timers = [
+      setTimeout(() => showFrame(1), 1456),
+      setTimeout(() => showFrame(2), 3224),
+      setTimeout(finish, 5200),
+    ];
   });
   motion.addEventListener("change", () => {
-    if (motion.matches && coffee.dataset.state === "brewing") finish();
+    if (motion.matches && coffee.dataset.state === "brewing") {
+      clearTimers();
+      showStill(frame);
+    }
   });
 }

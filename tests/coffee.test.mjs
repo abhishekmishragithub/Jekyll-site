@@ -44,37 +44,55 @@ function setup(reduced = false) {
   });
   return { coffee, button, status, motion, timers, listeners };
 }
-test("coffee plays once, prevents overlapping brews, and allows replay after completion", () => {
-  const { coffee, button, status, timers, listeners } = setup();
-  assert.equal(button.hidden, false);
-  listeners.click();
-  assert.equal(coffee.dataset.state, "brewing");
-  assert.equal(button.disabled, true);
-  assert.equal(status.textContent, "A little patience for the press.");
-  listeners.click();
-  assert.equal(timers.size, 1);
-  const timer = [...timers.values()][0];
-  assert.equal(timer.delay, 5200);
-  timer.fn();
-  assert.equal(coffee.dataset.state, "done");
-  assert.equal(button.disabled, false);
-  assert.equal(timers.size, 0);
-  assert.equal(status.textContent, "That’s better. Enjoy your cup.");
-  listeners.click();
-  assert.equal(coffee.dataset.state, "brewing");
-  assert.equal(timers.size, 1);
+test("automatic playback advances all poses and resets on replay without overlapping", () => {
+  const s = setup();
+  assert.equal(s.button.hidden, false);
+  assert.equal(s.coffee.dataset.frame, "0");
+  s.listeners.click();
+  assert.equal(s.coffee.dataset.state, "brewing");
+  assert.equal(s.button.disabled, true);
+  s.listeners.click();
+  assert.equal(s.timers.size, 3);
+  const scheduled = [...s.timers.values()].sort((a,b) => a.delay-b.delay);
+  assert.deepEqual(scheduled.map(t=>t.delay), [1456,3224,5200]);
+  scheduled[0].fn(); assert.equal(s.coffee.dataset.frame, "1");
+  scheduled[1].fn(); assert.equal(s.coffee.dataset.frame, "2");
+  scheduled[2].fn(); assert.equal(s.coffee.dataset.frame, "3");
+  assert.equal(s.coffee.dataset.state, "done");
+  assert.equal(s.button.disabled, false);
+  assert.equal(s.timers.size, 0);
+  s.listeners.click();
+  assert.equal(s.coffee.dataset.frame, "0");
+  assert.equal(s.coffee.dataset.state, "brewing");
 });
-test("reduced motion completes immediately and also cancels an in-flight animation", () => {
-  const reduced = setup(true);
-  reduced.listeners.click();
-  assert.equal(reduced.coffee.dataset.state, "done");
-  assert.equal(reduced.button.disabled, false);
-  assert.equal(reduced.timers.size, 0);
-  const changing = setup();
-  changing.listeners.click();
-  changing.motion.matches = true;
-  changing.listeners.motion();
-  assert.equal(changing.coffee.dataset.state, "done");
-  assert.equal(changing.button.disabled, false);
-  assert.equal(changing.timers.size, 0);
+test("reduced-motion clicks advance still poses and Another cup visibly resets", () => {
+  const s = setup(true);
+  for (let cycle=0; cycle<3; cycle++) {
+    for (const expected of ["1","2","3","0"]) {
+      const before=s.coffee.dataset.frame;
+      s.listeners.click();
+      assert.equal(s.coffee.dataset.frame, expected);
+      assert.notEqual(s.coffee.dataset.frame, before);
+      assert.equal(s.button.disabled, false);
+      assert.equal(s.timers.size, 0);
+      if (expected === "3") assert.equal(s.button.textContent, "Another cup? ↻");
+    }
+  }
+});
+test("enabling reduced motion cancels timers and preserves the visible pose", () => {
+  const s=setup(); s.listeners.click();
+  [...s.timers.values()].find(t=>t.delay===1456).fn();
+  s.motion.matches=true; s.listeners.motion();
+  assert.equal(s.coffee.dataset.frame,"1");
+  assert.equal(s.coffee.dataset.state,"stepping");
+  assert.equal(s.button.disabled,false);
+  assert.equal(s.timers.size,0);
+  s.listeners.click(); assert.equal(s.coffee.dataset.frame,"2");
+});
+test("turning motion back on waits for a click before automatic playback",()=>{
+  const s=setup(true); s.listeners.click();
+  s.motion.matches=false; s.listeners.motion();
+  assert.equal(s.coffee.dataset.frame,"1"); assert.equal(s.timers.size,0);
+  s.listeners.click();
+  assert.equal(s.coffee.dataset.frame,"0"); assert.equal(s.timers.size,3);
 });
