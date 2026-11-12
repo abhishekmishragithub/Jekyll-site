@@ -1,4 +1,3 @@
-import { mountCoffee } from "./coffee-motion.mjs";
 import { matchesItem, readFilters } from "./portfolio-core.mjs";
 
 const search = document.querySelector("#index-search");
@@ -60,8 +59,32 @@ if (search) {
 }
 
 const coffee = document.querySelector("#coffee");
-if (coffee) mountCoffee(coffee, {
-  motion: matchMedia("(prefers-reduced-motion: reduce)"),
-  requestFrame: requestAnimationFrame,
-  cancelFrame: cancelAnimationFrame,
-});
+if (coffee) {
+  const button = document.querySelector("#brew-button");
+  const status = document.querySelector("#brew-status");
+  const motion = matchMedia("(prefers-reduced-motion: reduce)");
+  let timeout;
+  function finish() {
+    clearTimeout(timeout);
+    coffee.dataset.state = "done";
+    button.disabled = false;
+    button.textContent = "Another cup? ↻";
+    status.textContent = "That’s better. Enjoy your cup.";
+  }
+  button.hidden = false;
+  button.addEventListener("click", () => {
+    if (coffee.dataset.state === "brewing") return;
+    coffee.dataset.state = "ready";
+    // Commit the reset before replaying the finite CSS animation.
+    void coffee.offsetWidth;
+    coffee.dataset.state = "brewing";
+    button.disabled = true;
+    button.textContent = "Easy does it…";
+    status.textContent = "A little patience for the press.";
+    if (motion.matches) finish();
+    else timeout = setTimeout(finish, 5200);
+  });
+  motion.addEventListener("change", () => {
+    if (motion.matches && coffee.dataset.state === "brewing") finish();
+  });
+}

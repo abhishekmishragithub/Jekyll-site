@@ -1,14 +1,11 @@
-# Current brewing scene and name lettering
+# Current illustration and lettering
 
-The homepage now uses an original code-native SVG illustration in `_includes/desk.html`. Its arms, hands, body, head, brewer, plunger and cup are separate parts. `assets/js/coffee-motion.mjs` interpolates their positions on requestAnimationFrame over a finite 10.4-second sequence: press, release, lift the brewer vertically, move it aside, set it down, pick up the cup, sip, and lower it slightly. The pressing palm stays attached to the plunger; the holding hand follows the brewer; the cup hand follows the handle through the sip. There is no raster frame swapping or autoplay. Reduced motion immediately shows the final pose by default, with a separately labelled “Play full animation” button for an explicit, one-time opt-in. Without JavaScript the initial drawing remains visible.
+At the owner’s request, restore the original character sheet and 5.2-second four-frame brewing sequence from commit `6c14361`. Remove the later articulated SVG character and its motion controller. Keep the custom name lettering in `_includes/name-lettering.html`, with accessible heading text. All other type uses Geist.
 
-The character is illustrative, not a portrait of Abhishek. A face reference is deferred at the owner’s request. `_includes/name-lettering.html` contains original SVG pen paths spelling Abhishek Mishra; this is a decorative handwritten wordmark, not a reproduction of his actual signature. The heading retains screen-reader text.
+The site now uses a white/black/gray theme. CSS presents the original artwork and portrait in grayscale without changing the source image files. The old sequence is intentionally a flipbook, not continuous limb animation. Reduced-motion users see the final cup immediately after activation. No face personalization has been attempted; the owner will supply reference photos in a later revision.
 
-The earlier PNG/WebP assets remain in source history but are excluded from the generated site.
+## Original image provenance
 
----
-
-## Previous flipbook provenance
 
 # Brewing illustration
 

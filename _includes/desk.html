@@ -1,76 +1,8 @@
 <aside class="coffee-corner" id="coffee" data-state="ready" aria-label="A little coffee break">
-  <p class="handwritten brew-note">a little effort. a good cup.</p>
-  <svg class="brew-scene" viewBox="0 0 360 450" role="img" aria-labelledby="brew-title brew-desc">
-    <title id="brew-title">A little coffee ritual</title>
-    <desc id="brew-desc">A person presses an AeroPress, sets the brewer aside, and lifts their coffee for a sip.</desc>
-    <defs>
-      <clipPath id="plunger-clip"><path d="M150 215H212V354H150Z"/></clipPath>
-      <pattern id="shirt-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(18)"><path d="M1 0v3" stroke="#703f31" stroke-opacity=".14" stroke-width=".8"/></pattern>
-    </defs>
-    <g stroke="#493b32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <!-- The body, arms, hands, press and cup are independent vector parts. -->
-      <g data-brew="body">
-        <path d="M112 202Q134 191 148 187L193 187Q212 192 231 205L244 421H88L96 259Z" fill="#b97252"/>
-        <path d="M112 202Q134 191 148 187L193 187Q212 192 231 205L244 421H88L96 259Z" fill="url(#shirt-hatch)" stroke="none"/>
-        <path d="M148 166L146 194Q168 213 195 191L189 165" fill="#dcb28c"/>
-        <path d="M146 190L164 209L147 226L128 197M193 188L164 209L180 228L210 198" fill="#c78361"/>
-        <path d="M164 214L169 414M112 335L102 394M218 338L231 406" fill="none" stroke="#92583e"/>
-        <path d="M185 248L214 249L211 278Q199 287 186 277Z" fill="#c78361"/>
-        <g fill="#5e4536" stroke="none"><circle cx="167" cy="251" r="1.8"/><circle cx="168" cy="291" r="1.8"/><circle cx="169" cy="332" r="1.8"/><circle cx="169" cy="373" r="1.8"/></g>
-      </g>
-      <g data-brew="head">
-        <path d="M128 139Q109 135 113 151Q117 165 131 162M208 134Q224 130 221 146Q221 158 208 160" fill="#dcb28c"/>
-        <path d="M126 103Q136 78 172 81Q209 87 213 119L207 162Q194 187 169 186Q139 182 128 159Z" fill="#e3ba94"/>
-        <path d="M129 146Q140 154 146 160Q162 151 172 157Q181 149 196 154L209 144Q210 172 189 184Q166 197 144 180Q127 167 129 146Z" fill="#49392e"/>
-        <path d="M154 163Q170 174 186 161Q176 181 161 174Z" fill="#fbf3e2" stroke-width="1.2"/>
-        <path d="M168 133L163 150Q168 154 175 150" fill="none" stroke="#a47959"/>
-        <path d="M126 124Q114 115 120 103Q110 92 123 85Q121 70 136 70Q138 54 153 64Q167 48 179 62Q196 54 202 72Q221 72 219 88Q231 98 217 112L211 128L205 107Q186 110 184 91Q170 109 154 99Q144 115 131 107Z" fill="#49392e"/>
-        <g fill="none" stroke="#826449" stroke-width="1.4"><path d="M126 91Q125 80 139 81Q149 87 139 93M145 72Q147 62 158 71Q166 79 155 85M172 69Q178 61 186 74Q190 86 180 86M200 82Q211 82 211 93Q211 103 201 101M133 104Q141 95 148 100"/></g>
-        <g fill="none" stroke="#493b32" stroke-width="2.1"><ellipse cx="146" cy="132" rx="18" ry="15" transform="rotate(7 146 132)"/><ellipse cx="190" cy="131" rx="18" ry="15" transform="rotate(-6 190 131)"/><path d="M164 131Q168 127 172 130M128 129L119 125M208 128L214 122"/></g>
-        <path d="M139 133Q146 138 153 133M182 132Q189 137 196 131" fill="none" stroke-width="1.6"/>
-        <path d="M136 114L153 116M182 115L197 112" stroke-width="2.5"/>
-        <path d="M132 145l4 2m60-2l4-2" stroke="#c08669" stroke-width="2.5"/>
-      </g>
-      <path class="brew-arm-outline" data-brew="left-outline" d="M112 218Q40 287 94 281L177 225"/>
-      <path class="brew-arm-sleeve" data-brew="left-sleeve" d="M112 218Q40 287 94 281L177 225"/>
-      <path class="brew-forearm" data-brew="left-skin" d="M125 264L177 225"/>
-      <path class="brew-arm-outline" data-brew="right-outline" d="M226 219Q283 273 260 303L211 322"/>
-      <path class="brew-arm-sleeve" data-brew="right-sleeve" d="M226 219Q283 273 260 303L211 322"/>
-      <path class="brew-forearm" data-brew="right-skin" d="M239 311L211 322"/>
-      <path d="M39 425Q178 422 324 426M52 432L120 431M242 433L310 432" fill="none" stroke="#a59681" stroke-width="1.2"/>
-      <ellipse cx="182" cy="423" rx="46" ry="3" fill="#d7cab4" stroke="none"/>
-      <g data-brew="cup">
-        <path d="M156 383Q130 376 131 395Q132 411 155 406" fill="none" stroke="#493b32" stroke-width="8"/>
-        <path d="M156 383Q130 376 131 395Q132 411 155 406" fill="none" stroke="#a7bbb9" stroke-width="4"/>
-        <path d="M151 374L154 410Q155 422 180 422Q205 421 206 411L209 374Z" fill="#a7bbb9"/>
-        <ellipse cx="180" cy="375" rx="29" ry="6" fill="#e4ddd0"/>
-        <ellipse cx="180" cy="376" rx="24" ry="3" fill="#75503b" stroke="none"/>
-        <path d="M160 387L162 408" stroke="#d4e1d8" stroke-width="3"/>
-        <g data-brew="steam" opacity="0" fill="none" stroke="#a59681" stroke-width="1.2"><path d="M170 359Q160 348 170 339Q179 330 172 322M189 360Q198 350 188 342Q183 336 187 329"/></g>
-      </g>
-      <g data-brew="press">
-        <g clip-path="url(#plunger-clip)"><g data-brew="plunger">
-          <path d="M164 234H198V326H164Z" fill="#b4b6ab"/><path d="M169 240V320" stroke="#f6f0e3" stroke-width="3"/>
-          <path d="M157 229Q181 225 205 229L205 236H157Z" fill="#716e62"/>
-          <path d="M164 321H198V331H164Z" fill="#514c43"/>
-        </g>
-        </g>
-        <path d="M157 294L161 360H201L205 294Z" fill="#d8c9af"/>
-        <path d="M163 303L166 350" stroke="#f6f0e3" stroke-width="3"/>
-        <path d="M159 294Q182 299 203 294M160 352H202" fill="none"/>
-        <path d="M153 360H209L211 374H151Z" fill="#716e62"/>
-        <g fill="none" stroke="#8b7a62" stroke-width="1.2"><circle cx="185" cy="308" r="3"/><circle cx="185" cy="322" r="3"/><circle cx="185" cy="337" r="3"/></g>
-      </g>
-      <g data-brew="left-hand" transform="translate(177 225)">
-        <path d="M-10 5Q-15-1-9-7L-1-12Q5-14 17-9L29-4Q34 0 28 2L9-3L27 3Q30 7 25 8L6 3L20 9Q22 13 16 12L-1 7Z" fill="#e3ba94"/>
-        <path d="M-3-5L9-3M0 0L6 3" fill="none" stroke="#ac7e5d" stroke-width="1"/>
-      </g>
-      <g data-brew="right-hand" transform="translate(211 322)">
-        <path d="M8-11Q14-6 11 3L2 16Q-2 19-5 15L1 4L-8 17Q-12 19-13 14L-5 1L-15 12Q-20 13-18 7L-7-7L-17 0Q-23 2-22-3L-7-14Q1-18 8-11Z" fill="#e3ba94"/>
-      </g>
-    </g>
-  </svg>
+  <p class="note brew-note">a little effort. a good cup.</p>
+  <div class="brew-window" role="img" aria-label="An illustrated coffee lover leans into an AeroPress, then enjoys a cup.">
+    <img class="brew-strip" src="{{ '/assets/portfolio/brew-sequence.webp' | relative_url }}" width="2172" height="724" alt="" fetchpriority="high">
+  </div>
   <button class="brew-button" id="brew-button" type="button" hidden>Brew with me <span aria-hidden="true">↓</span></button>
   <span class="brew-status" id="brew-status" role="status" aria-live="polite">An illustrated coffee break.</span>
-  <span class="motion-choice" id="brew-motion-choice" hidden>Reduced motion is on. <button id="brew-motion" type="button">Play full animation</button></span>
 </aside>
