@@ -1,0 +1,14 @@
+<dialog class="photo-viewer" id="photo-viewer" aria-labelledby="photo-caption">
+  <button class="photo-close" type="button" aria-label="Close photo">Close ×</button>
+  <figure>
+    <img class="photo-full" alt="">
+    <figcaption id="photo-caption"></figcaption>
+  </figure>
+  <div class="photo-navigation">
+    <button type="button" data-photo-prev aria-label="Previous photo">← Previous</button>
+    <span class="photo-counter" aria-live="polite"></span>
+    <button type="button" data-photo-next aria-label="Next photo">Next →</button>
+  </div>
+  <p class="photo-error" role="status" hidden>The photo couldn’t load. <a class="photo-fallback">Open the image directly ↗</a></p>
+</dialog>
+<script type="module" src="{{ '/assets/js/photo-viewer.js' | relative_url }}"></script>

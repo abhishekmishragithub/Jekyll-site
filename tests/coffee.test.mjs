@@ -22,6 +22,7 @@ function setup(reduced = false) {
     },
   };
   const status = { textContent: "" };
+  const scene = { setAttribute: (key, value) => { scene[key] = value; } };
   const motion = {
     matches: reduced,
     addEventListener: (_, fn) => {
@@ -30,6 +31,7 @@ function setup(reduced = false) {
   };
   const nodes = {
     "#coffee": coffee,
+    ".brew-window": scene,
     "#brew-button": button,
     "#brew-status": status,
   };
@@ -42,7 +44,7 @@ function setup(reduced = false) {
     },
     clearTimeout: (id) => timers.delete(id),
   });
-  return { coffee, button, status, motion, timers, listeners };
+  return { coffee, button, status, scene, motion, timers, listeners };
 }
 test("automatic playback advances all poses and resets on replay without overlapping", () => {
   const s = setup();
@@ -95,4 +97,17 @@ test("turning motion back on waits for a click before automatic playback",()=>{
   assert.equal(s.coffee.dataset.frame,"1"); assert.equal(s.timers.size,0);
   s.listeners.click();
   assert.equal(s.coffee.dataset.frame,"0"); assert.equal(s.timers.size,3);
+});
+
+test("B sequence describes the server, pour and sip in step with each frame", () => {
+  const s = setup(true);
+  assert.match(s.scene["aria-label"], /Abhishek.*glass server/);
+  s.listeners.click();
+  assert.equal(s.button.textContent, "Pour into the mug →");
+  assert.match(s.status.textContent, /collected in the server/);
+  s.listeners.click();
+  assert.match(s.status.textContent, /From the server into the mug/);
+  assert.match(s.scene["aria-label"], /From the server into the mug/);
+  s.listeners.click();
+  assert.match(s.status.textContent, /first sip/);
 });
