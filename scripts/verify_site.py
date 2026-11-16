@@ -80,6 +80,19 @@ for name in ['index.html', 'about/index.html']:
         errors.append(f'{name}: missing obfuscated contact address')
     if 'https://www.linkedin.com/in/stalwartcoder/' not in rendered:
         errors.append(f'{name}: missing LinkedIn contact')
+# Photo data is a rendering contract, including on baseurl deployments.
+photos = json.loads(Path('_data/photos.json').read_text())
+about = (root / 'about/index.html').read_text()
+for photo in photos:
+    for key in ['src', 'full']:
+        expected_url = base + photo[key]
+        if about.count('"' + expected_url + '"') != 1:
+            errors.append(f'About must render {photo["id"]} {key} exactly once at {expected_url}')
+if 'brew-server.webp' not in (root / 'index.html').read_text():
+    errors.append('Homepage is missing the approved server-and-pour illustration')
+for name in ['assets/portfolio/brew-sequence.png', 'assets/portfolio/brew-sequence.webp',
+             'smooth.html', 'review.html', 'variants.html', 'corner.mjs', 'puppet-v1.png']:
+    if (root / name).exists(): errors.append(f'Build includes superseded or local-only art: {name}')
 if errors:
     print('\n'.join(errors))
     sys.exit(1)

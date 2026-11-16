@@ -1,9 +1,112 @@
 [
   {
-    "src": "/assets/img/abhishek_mishra_001.jpeg",
-    "alt": "Abhishek smiling at a community event",
-    "caption": "me, among my people",
-    "width": 1280,
-    "height": 853
+    "id": "cafe-portrait",
+    "group": "intro",
+    "src": "/assets/portfolio/photos/cafe-portrait.webp",
+    "full": "/assets/portfolio/photos/cafe-portrait-large.webp",
+    "alt": "Abhishek smiling at a café, beside a shelf of coffee cups",
+    "caption": "A café is a good place to start.",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": "gophercon",
+    "group": "community",
+    "src": "/assets/portfolio/photos/gophercon.webp",
+    "full": "/assets/portfolio/photos/gophercon-large.webp",
+    "alt": "Abhishek speaking on the GopherCon India 2022 stage",
+    "caption": "GopherCon India, 2022",
+    "width": 640,
+    "height": 427
+  },
+  {
+    "id": "gdg-chennai",
+    "group": "community",
+    "src": "/assets/portfolio/photos/gdg-chennai.webp",
+    "full": "/assets/portfolio/photos/gdg-chennai-large.webp",
+    "alt": "Abhishek with fellow community members in front of a GDG Chennai screen",
+    "caption": "With the GDG Chennai crew",
+    "width": 640,
+    "height": 550
+  },
+  {
+    "id": "hackathon",
+    "group": "community",
+    "src": "/assets/portfolio/photos/hackathon.webp",
+    "full": "/assets/portfolio/photos/hackathon-large.webp",
+    "alt": "Abhishek and two participants looking at a laptop during a hackathon",
+    "caption": "Working through it together",
+    "width": 640,
+    "height": 427
+  },
+  {
+    "id": "devrel-meetup",
+    "group": "community",
+    "src": "/assets/portfolio/photos/devrel-meetup.webp",
+    "full": "/assets/portfolio/photos/devrel-meetup-large.webp",
+    "alt": "Abhishek presenting at a developer relations meetup",
+    "caption": "A room full of developer advocates",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": "reactor-panel",
+    "group": "community",
+    "src": "/assets/portfolio/photos/reactor-panel.webp",
+    "full": "/assets/portfolio/photos/reactor-panel-large.webp",
+    "alt": "Abhishek in a seated panel discussion with other speakers",
+    "caption": "Conversations on a panel",
+    "width": 480,
+    "height": 640
+  },
+  {
+    "id": "lucknow-talk",
+    "group": "community",
+    "src": "/assets/portfolio/photos/lucknow-talk.webp",
+    "full": "/assets/portfolio/photos/lucknow-talk-large.webp",
+    "alt": "Abhishek speaking behind the AI Beyond Apps Lucknow 2026 lectern",
+    "caption": "AI Beyond Apps · Lucknow, 2026",
+    "width": 474,
+    "height": 640
+  },
+  {
+    "id": "coffee-and-books",
+    "group": "life",
+    "src": "/assets/portfolio/photos/coffee-and-books.webp",
+    "full": "/assets/portfolio/photos/coffee-and-books-large.webp",
+    "alt": "Abhishek working on his laptop beside bookshelves, a coffee mug and a hand grinder",
+    "caption": "Coffee, books, and too many tabs",
+    "width": 480,
+    "height": 640
+  },
+  {
+    "id": "cafe-window",
+    "group": "life",
+    "src": "/assets/portfolio/photos/cafe-window.webp",
+    "full": "/assets/portfolio/photos/cafe-window-large.webp",
+    "alt": "Abhishek in a red cap sitting at a café table beside a leafy window",
+    "caption": "A table by the window",
+    "width": 360,
+    "height": 640
+  },
+  {
+    "id": "outdoors",
+    "group": "life",
+    "src": "/assets/portfolio/photos/outdoors.webp",
+    "full": "/assets/portfolio/photos/outdoors-large.webp",
+    "alt": "Abhishek standing among rocks and trees on a walk outdoors",
+    "caption": "Away from a screen for a while",
+    "width": 480,
+    "height": 640
+  },
+  {
+    "id": "by-the-water",
+    "group": "life",
+    "src": "/assets/portfolio/photos/by-the-water.webp",
+    "full": "/assets/portfolio/photos/by-the-water-large.webp",
+    "alt": "Abhishek standing by the waterfront with hills behind him",
+    "caption": "A little further from the desk",
+    "width": 360,
+    "height": 640
   }
 ]

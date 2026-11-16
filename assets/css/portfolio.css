@@ -940,3 +940,70 @@ td {
 }
 .name-greeting svg { width: 45px; height: 36px; flex: none; }
 .contact-address { overflow-wrap: anywhere; }
+
+/* A small photo album woven into the About page. */
+.photo-gallery {
+  display: block;
+  columns: 2;
+  column-gap: 24px;
+  padding-top: 22px;
+}
+.photo-gallery .photo-print {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin: 0 0 30px;
+  transform: rotate(-2deg);
+}
+.photo-gallery .photo-print:nth-child(even) { transform: rotate(2.5deg); }
+.photo-gallery .photo-print:nth-child(3n) { transform: rotate(-1deg); }
+.photo-link { display: block; cursor: zoom-in; }
+.photo-print:focus-within { z-index: 2; }
+.photo-print::before { pointer-events: none; }
+.collage-note .photo-hint { font-size: 11px; color: var(--muted); }
+.photo-viewing { overflow: hidden; }
+.photo-viewer {
+  width: min(1000px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: var(--ink);
+}
+.photo-viewer::backdrop { background: #000b; }
+.photo-viewer figure { margin: 12px 0 0; }
+.photo-viewer .photo-full {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 68dvh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 0;
+}
+.photo-viewer figcaption { text-align: center; margin: 14px 0; font-size: 14px; }
+.photo-viewer button {
+  font: inherit;
+  font-size: 13px;
+  padding: 7px 10px;
+  background: #fff;
+  color: inherit;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.photo-close { display: block; margin-left: auto; }
+.photo-navigation { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.photo-counter { color: var(--muted); font-size: 12px; }
+.photo-viewer .photo-error { margin: 15px 0 0; text-align: center; font-size: 13px; }
+@media (max-width: 550px) {
+  .photo-gallery { column-gap: 14px; padding-left: 8px; padding-right: 8px; }
+  .photo-gallery .photo-print { margin-bottom: 22px; }
+  .photo-gallery .photo-print figcaption { font-size: 11px; padding: 7px 2px 0; }
+  .photo-viewer { padding: 14px; }
+}
+@media print {
+  .photo-gallery { columns: 2; }
+  .photo-print { break-inside: avoid; }
+  .photo-viewer { display: none; }
+}

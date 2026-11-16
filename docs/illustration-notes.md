@@ -1,8 +1,18 @@
 # Current illustration and lettering
 
-At the owner’s request, restore the original character sheet and 5.2-second four-frame brewing sequence from commit `6c14361`. Remove the later articulated SVG character and its motion controller. Keep the custom name lettering in `_includes/name-lettering.html`, with accessible heading text. All other type uses Geist.
+The owner approved variant B on 16 November 2026: the personalized ink character presses into a glass server, pours into a separate mug, then takes a sip. `assets/portfolio/brew-server.webp` is the approved four-pose illustration, encoded at quality 88 from the local 2172 × 724 PNG. It preserves the younger, narrower face, rectangular glasses, wavy hair, and pencil/ink texture reviewed by the owner.
 
-The site now uses a white/black/gray theme. CSS presents the original artwork and portrait in grayscale without changing the source image files. The old sequence is intentionally a flipbook, not continuous limb animation. Automatic playback advances four still frames over 5.2 seconds. Reduced-motion users advance one still pose per click, with replay returning to the first pose. Enabling reduced motion during playback cancels timers and preserves the visible pose. No face personalization has been attempted; the owner will supply reference photos in a later revision.
+The name lettering in `_includes/name-lettering.html` is unchanged. The homepage uses the established finite 5.2-second four-pose playback, not continuous limb animation. Reduced-motion clicks advance individual stills, and replay resets to the first pose. Descriptions follow the server, pour and sip. The full character sheet is not displayed as a page.
+
+The personalized character was generated with the built-in image tool using owner-authorized photos from `for-website`. This B variant used the approved generated character as its reference. Raw photos, generated exploration sheets, the rejected articulated rig and the stray-bean Easter egg remain local. They are not part of this PR or deployment. Both original generic brew assets are excluded from the build; their provenance remains below for history.
+
+## Approved B generation prompt
+
+Use case: precise-object-edit. Make an alternate ending to the supplied approved four-panel coffee illustration. KEEP EXACT SAME CHARACTER: youthful narrow oval face, softened facial shading, rectangular black glasses, shoulder-length swept-back wavy black hair, short moustache/beard, warm smile, rolled-sleeve gray shirt. Preserve original black-ink pencil texture, body proportions, viewpoint, equal panel spacing and tabletop baseline. Four equal portrait cells across a single horizontal strip, overall 3:1 ratio. No text, labels, borders, watermark or color.
+Change the brewing vessel and actions ONLY to demonstrate PRESS INTO A SERVER, THEN POUR INTO A MUG. Panel 1: the AeroPress sits upright on the wide, sturdy top of a small clear glass coffee server/carafe with a handle and pouring lip. One palm on high plunger, other hand steadies the brewer. An EMPTY ceramic mug waits on the table to the right, clearly separate from carafe. Panel 2: plunger fully pressed down, fresh dark coffee visibly collected IN THE GLASS SERVER, ceramic mug still empty beside it. Same character leaning in gently, not excessive force. Panel 3: AeroPress removed and set upright on the tabletop at the left. Character grips the glass server BY ITS HANDLE, tilts its pouring lip toward the waiting ceramic mug, and pours a clear continuous stream of dark brewed coffee INTO THE MUG. Other hand rests beside mug, unobstructed view of stream and mug. NO kettle here: this is a glass server of brewed coffee. Panel 4: character enjoys the ceramic mug, happy relaxed expression like original final panel; now-empty glass server and used AeroPress sit on table beside him. Keep face likeness consistent across all four images. Generous white space between panels, all props and elbows inside each equal-width cell. This is a review storyboard, not publication.
+
+
+## Historical generic illustration (superseded)
 
 ## Original image provenance
 

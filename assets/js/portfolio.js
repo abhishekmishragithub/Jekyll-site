@@ -62,14 +62,15 @@ const coffee = document.querySelector("#coffee");
 if (coffee) {
   const button = document.querySelector("#brew-button");
   const status = document.querySelector("#brew-status");
+  const scene = document.querySelector(".brew-window");
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   let timers = [];
   let frame = 0;
   const poses = [
-    ["Brew with me ↓", "An illustrated coffee break."],
-    ["Finish the press →", "A little patience for the press."],
-    ["Pick up the cup →", "Coffee’s ready. Time for a sip."],
-    ["Another cup? ↻", "That’s better. Enjoy your cup."],
+    ["Brew with me ↓", "Ready to press into the glass server."],
+    ["Pour into the mug →", "Fresh coffee, collected in the server."],
+    ["Pick up the cup →", "From the server into the mug."],
+    ["Another cup? ↻", "A first sip. That’s better."],
   ];
   function clearTimers() {
     timers.forEach(clearTimeout);
@@ -78,6 +79,8 @@ if (coffee) {
   function showFrame(next) {
     frame = next;
     coffee.dataset.frame = String(frame);
+    status.textContent = poses[frame][1];
+    scene.setAttribute("aria-label", `An illustration of Abhishek: ${poses[frame][1]}`);
   }
   function showStill(next) {
     showFrame(next);

@@ -5,7 +5,7 @@ kicker: The person behind the work
 description: Based in Bengaluru. Engineering, community, manual-brew coffee, and LEGO.
 permalink: /about/
 ---
-{% include photo-collage.html %}
+{% include photo-collage.html group="intro" note=true label="A café portrait" %}
 
 Hi, I’m Abhishek Mishra. You might know me as **@stalwartcoder**, or **Tofu** on GitHub. I’m based in **Bengaluru**, and I work at the intersection of engineering, developer education, and community.
 
@@ -27,9 +27,13 @@ I enjoy mentoring, pair programming, and the conversation that starts after a ta
 
 You can find more of my gatherings on Luma under [@stalwartcoder](https://luma.com/user/stalwartcoder) and [@abhishek_](https://luma.com/user/abhishek_), or browse [talks and events in the index]({{ '/archive/' | relative_url }}?type=event).
 
+{% include photo-collage.html group="community" label="Stages, workshops, and community" %}
+
 ## Away from the keyboard
 
 Coffee is a bit of a rabbit hole. The AeroPress is part of it. So are LEGO, mechanical keyboards, philosophy, and history. I also play tabla and enjoy Indian classical music.
+
+{% include photo-collage.html group="life" label="Coffee and life between events" %}
 
 ## Around the internet
 
@@ -38,3 +42,5 @@ Coffee is a bit of a rabbit hole. The AeroPress is part of it. So are LEGO, mech
 [Browse my work]({{ '/archive/' | relative_url }}) · [Résumé (2025 PDF)]({{ '/assets/misc/Abhishek_Mishra_Resume_v2_2025.pdf' | relative_url }})
 
 <p class="contact-address">Prefer email? {{ site.contact_email_display | escape }}</p>
+
+{% include photo-viewer.html %}
