@@ -414,7 +414,7 @@
     "full": "/assets/portfolio/photos/badminton-evening-large.webp",
     "alt": "Players on an indoor badminton court",
     "caption": "A little time on court",
-    "width": 535,
+    "width": 486,
     "height": 640
   },
   {
@@ -425,7 +425,7 @@
     "full": "/assets/portfolio/photos/badminton-rally-large.webp",
     "alt": "Players meeting a shuttle during an indoor badminton rally",
     "caption": "One more rally",
-    "width": 535,
+    "width": 486,
     "height": 640
   },
   {
@@ -436,7 +436,7 @@
     "full": "/assets/portfolio/photos/badminton-court-large.webp",
     "alt": "A player jumping for a shuttle on an indoor badminton court",
     "caption": "Away from the keyboard, on court",
-    "width": 535,
+    "width": 609,
     "height": 640
   },
   {
@@ -447,7 +447,7 @@
     "full": "/assets/portfolio/photos/hill-walk-large.webp",
     "alt": "A walker on a green hillside beneath mist",
     "caption": "A walk above the clouds",
-    "width": 535,
+    "width": 486,
     "height": 640
   },
   {
@@ -480,17 +480,6 @@
     "full": "/assets/portfolio/photos/at-home-large.webp",
     "alt": "Abhishek standing in a patterned shirt in a room at home",
     "caption": "A day at home",
-    "width": 480,
-    "height": 640
-  },
-  {
-    "id": "fresh-cut",
-    "group": "life",
-    "more": true,
-    "src": "/assets/portfolio/photos/fresh-cut.webp",
-    "full": "/assets/portfolio/photos/fresh-cut-large.webp",
-    "alt": "Abhishek taking a mirror photo while seated at a hair salon",
-    "caption": "A little reset",
     "width": 480,
     "height": 640
   },

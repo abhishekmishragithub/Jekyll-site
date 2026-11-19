@@ -1,8 +1,8 @@
 # About photo album
 
-The owner supplied and explicitly approved the `for-website` folder for publication. Every photo below was read from that folder. None was sourced from the separate reference-only folder. This curated selection contains 55 still images; the MOV video is outside this photo-album change. Originals remain local.
+The owner supplied and explicitly approved the `for-website` folder for publication. Every photo below was read from that folder. None was sourced from the separate reference-only folder. This curated selection contains 54 still images; the MOV video is outside this photo-album change. Originals remain local.
 
-The original 11 selected prints stay visible. The other 44 photos sit in expandable Community and Away from the keyboard albums. The four former phone-album screenshots were cropped to their photographs, removing the device interface. Captions describe visible content; event names/dates are used only where supported by the photograph or its supplied filename. No identities are inferred for other people.
+The original 11 selected prints stay visible. The other 43 photos sit in expandable Community and Away from the keyboard albums. The four former phone-album screenshots were cropped to their photographs, removing the device interface. Captions describe visible content; event names/dates are used only where supported by the photograph or its supplied filename. No identities are inferred for other people.
 
 Web copies are auto-oriented, proportionally resized and encoded as WebP, with EXIF and other metadata removed. Small copies have a 640px maximum edge; enlarged copies have a 1600px maximum edge. Photos are not retouched or generatively altered. The collage follows the monochrome site treatment; the enlarged viewer shows the photos in their original colour. Each photo renders once; collapsed albums work without JavaScript, and full-size images load only on request.
 
@@ -53,7 +53,6 @@ Web copies are auto-oriented, proportionally resized and encoded as WebP, with E
 | `devfest-hyderabad` | `IMG_6190.JPG` | community (expanded album) |
 | `devfest-between-sessions` | `IMG_6194.JPG` | community (expanded album) |
 | `at-home` | `IMG_6463.JPG` | life (expanded album) |
-| `fresh-cut` | `IMG_6568.JPG` | life (expanded album) |
 | `jain-speaker` | `d30e3dd2-8231-47af-afd7-41a3a6990acf.JPG` | community (expanded album) |
 | `conference-conversation-one` | `GDS04617.JPG` | community (expanded album) |
 | `conference-conversation-two` | `GDS04618.JPG` | community (expanded album) |

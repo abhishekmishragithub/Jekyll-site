@@ -47,9 +47,9 @@ test('photo manifest contains unique, complete local WebP pairs and usable image
 
 test('expanded albums preserve the selected prints and include the supplied speaking photos',()=>{
  const photos=JSON.parse(readFileSync(new URL('../_data/photos.json',import.meta.url)));
- assert.equal(photos.length,55);
+ assert.equal(photos.length,54);
  assert.equal(photos.filter(p=>!p.more).length,11);
- assert.equal(photos.filter(p=>p.more).length,44);
+ assert.equal(photos.filter(p=>p.more).length,43);
  for(const id of ['on-stage','agent-framework','llama-playground','devfest-stage','jain-talk','neysa-workshop','meetup-audience'])assert(photos.some(p=>p.id===id&&p.group==='community'&&p.more));
  assert(photos.filter(p=>p.more).every(p=>p.group!=='intro'));
 });
