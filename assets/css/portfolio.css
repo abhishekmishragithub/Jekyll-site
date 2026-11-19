@@ -1007,3 +1007,13 @@ td {
   .photo-print { break-inside: avoid; }
   .photo-viewer { display: none; }
 }
+
+/* The rest of the album opens on request, leaving the selected prints in view. */
+.photo-album { margin: 1.5rem 0 3rem; border-block: 1px solid var(--line); }
+.photo-album summary { cursor: pointer; padding: 1rem .2rem; font-size: .95rem; }
+.photo-album summary span { margin-left: .5rem; color: var(--muted); font-size: .75rem; white-space: nowrap; }
+.photo-album summary::marker { font-size: .8em; }
+.photo-album summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.photo-album .album-intro { color: var(--muted); font-size: .85rem; margin: .5rem 0 1.5rem; }
+.photo-album .photo-gallery { margin-block: 0 1.5rem; }
+@media (max-width: 480px) { .photo-album summary span { display: block; margin: .25rem 0 0 1rem; } }

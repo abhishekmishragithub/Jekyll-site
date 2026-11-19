@@ -1,4 +1,9 @@
-{% assign photos = site.data.photos | where: "group", include.group %}
+{% assign group_photos = site.data.photos | where: "group", include.group %}
+{% if include.more %}
+  {% assign photos = group_photos | where: "more", true %}
+{% else %}
+  {% assign photos = group_photos | where_exp: "photo", "photo.more != true" %}
+{% endif %}
 <div class="photo-collage{% if include.note %} photo-collage-single{% else %} photo-gallery{% endif %}" role="group" aria-label="{{ include.label | escape }}">
   {% for photo in photos %}
   <figure class="photo-print">

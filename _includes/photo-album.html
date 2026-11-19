@@ -1,0 +1,8 @@
+{% assign album_photos = site.data.photos | where: "group", include.group | where: "more", true %}
+{% if album_photos.size > 0 %}
+<details class="photo-album">
+  <summary>{{ include.title | escape }} <span>{{ album_photos.size }} more photos</span></summary>
+  <p class="album-intro">{{ include.description | escape }}</p>
+  {% include photo-collage.html group=include.group more=true label=include.title %}
+</details>
+{% endif %}

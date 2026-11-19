@@ -28,12 +28,14 @@ I enjoy mentoring, pair programming, and the conversation that starts after a ta
 You can find more of my gatherings on Luma under [@stalwartcoder](https://luma.com/user/stalwartcoder) and [@abhishek_](https://luma.com/user/abhishek_), or browse [talks and events in the index]({{ '/archive/' | relative_url }}?type=event).
 
 {% include photo-collage.html group="community" label="Stages, workshops, and community" %}
+{% include photo-album.html group="community" title="More from the rooms I’ve been in" description="Talks, workshops, familiar faces, and the conversations between sessions." %}
 
 ## Away from the keyboard
 
 Coffee is a bit of a rabbit hole. The AeroPress is part of it. So are LEGO, mechanical keyboards, philosophy, and history. I also play tabla and enjoy Indian classical music.
 
 {% include photo-collage.html group="life" label="Coffee and life between events" %}
+{% include photo-album.html group="life" title="The rest of the camera roll" description="Café stops, days out, time on court, and ordinary moments in between." %}
 
 ## Around the internet
 

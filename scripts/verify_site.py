@@ -88,6 +88,27 @@ for photo in photos:
         expected_url = base + photo[key]
         if about.count('"' + expected_url + '"') != 1:
             errors.append(f'About must render {photo["id"]} {key} exactly once at {expected_url}')
+# Native disclosure must partition, rather than duplicate, the expanded photos.
+class Album(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.inside, self.count, self.expanded_urls, self.lazy = False, 0, set(), True
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'details' and 'photo-album' in a.get('class', '').split():
+            self.inside = True
+            self.count += 1
+            if 'open' in a: errors.append('Expanded photo albums should begin collapsed')
+        if self.inside and tag == 'img':
+            self.expanded_urls.add(a.get('src'))
+            self.lazy = self.lazy and a.get('loading') == 'lazy'
+    def handle_endtag(self, tag):
+        if tag == 'details': self.inside = False
+album = Album()
+album.feed(about)
+expected_expanded = {base + p['src'] for p in photos if p.get('more')}
+if album.count != 2 or album.expanded_urls != expected_expanded or not album.lazy:
+    errors.append('Expanded albums must contain exactly the lazy-loaded extra photos in two disclosures')
 if 'brew-server.webp' not in (root / 'index.html').read_text():
     errors.append('Homepage is missing the approved server-and-pour illustration')
 for name in ['assets/portfolio/brew-sequence.png', 'assets/portfolio/brew-sequence.webp',
