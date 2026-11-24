@@ -1017,3 +1017,22 @@ td {
 .photo-album .album-intro { color: var(--muted); font-size: .85rem; margin: .5rem 0 1.5rem; }
 .photo-album .photo-gallery { margin-block: 0 1.5rem; }
 @media (max-width: 480px) { .photo-album summary span { display: block; margin: .25rem 0 0 1rem; } }
+
+.bean-bench {padding-bottom: 2rem}
+.bean-bench h1 {margin-bottom: .5rem}
+.bean-bench > p, .sound-credits {color: var(--muted);font-size: .85rem}
+.bean-bench canvas {display:block;width:min(920px,calc(100vw - 40px));height:auto;position:relative;left:50%;transform:translateX(-50%);margin:1rem 0}
+.bench-info {min-height:4rem;text-align:center}
+.bench-info p {font-size:.85rem;color:var(--muted)}
+.bench-controls,.scrub-controls {display:flex;align-items:center;gap:.65rem;flex-wrap:wrap;justify-content:center}
+.bean-bench button,.bean-bench select {border:1px solid #aaa;border-radius:4px;background:var(--paper);color:var(--ink);padding:.45rem .8rem;font:inherit;font-size:.85rem}
+.bean-bench .primary {background:var(--ink);color:var(--paper)}
+.bean-bench button:disabled {opacity:.65}
+.scrub-controls {margin-top:1.3rem;font-size:.78rem}
+.scrub-controls input {min-width:80px;flex:1;accent-color:var(--ink)}
+.scrub-controls output {font-variant-numeric:tabular-nums;min-width:3.3rem}
+.bean-bench .progress {height:2px;background:var(--line);margin-top:.5rem}
+.bean-bench .progress span {display:block;height:100%;background:var(--ink)}
+.sound-credits {margin-top:1.5rem}
+.sound-credits summary {cursor:pointer}
+.sound-credits a {text-decoration:underline}
