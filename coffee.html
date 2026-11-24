@@ -1,0 +1,96 @@
+---
+layout: default
+title: One stray bean
+description: Brew an AeroPress with Abhishek, from weighing the beans to the final pour.
+permalink: /coffee/
+---
+
+<section class="bean-bench">
+  <h1>Since you’re here, make a cup.</h1>
+  <p>29.6 g coffee · 473 g water (16 US fl oz) · 1:16 · AeroPress XL</p>
+  <noscript>
+    Weigh two 14.8 g loads for the hand grinder, then brew at 1:16.
+    <a href="https://www.instagram.com/reel/DDoV_Fxpu9y/">
+      Watch my coffee ritual on Instagram.
+    </a>
+  </noscript>
+  <div id="player" hidden>
+    <canvas
+      id="bench"
+      width="2000"
+      height="880"
+      role="img"
+      aria-label="A hand-drawn coffee bench with beans, scale, C3 grinder, AeroPress, server, kettle and mug"
+    ></canvas>
+    <div class="bench-info" aria-live="polite">
+      <strong id="bench-title">Start with the beans.</strong>
+      <p id="bench-note">Weigh the first 14.8 g of beans.</p>
+    </div>
+    <div class="bench-controls">
+      <button class="primary" id="action">Brew a cup</button>
+      <button id="pause" hidden>Pause</button>
+      <audio
+        id="foley"
+        preload="auto"
+        data-src="{{ '/assets/coffee/brew.m4a' | relative_url }}"
+      ></audio>
+      <button id="sound" aria-pressed="false">Sound off</button>
+      <button id="reset">Start over ↻</button>
+    </div>
+    <div class="scrub-controls">
+      <label for="scrub">Explore the brew</label>
+      <input id="scrub" type="range" min="0" max="86" step="0.05" value="0" />
+      <output id="time" for="scrub">0 / 86s</output>
+      <label for="speed">Speed</label>
+      <select id="speed">
+        <option value="1">1×</option>
+        <option value="0.5">½×</option>
+      </select>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  </div>
+  <details class="sound-credits">
+    <summary>Field recordings</summary>
+    <p>
+      Bean handling and hand grinding from
+      <a href="https://www.instagram.com/reel/DDoV_Fxpu9y/">
+        Abhishek’s coffee ASMR Reel
+      </a>
+      .
+    </p>
+    <p>
+      Kettle, press and pour excerpts from Freesound, released under
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+      .
+    </p>
+    <ul>
+      <li>
+        AeroPress ·
+        <a href="https://freesound.org/people/faisalqadir/sounds/706280/">
+          liquid through the filter
+        </a>
+        and
+        <a href="https://freesound.org/people/faisalqadir/sounds/706279/">
+          final air release
+        </a>
+        by faisalqadir
+      </li>
+      <li>
+        Kettle pour ·
+        <a href="https://freesound.org/people/FOSSarts/sounds/740116/">
+          FOSSarts
+        </a>
+      </li>
+      <li>
+        Coffee into porcelain ·
+        <a href="https://freesound.org/people/wilhelmsqueek/sounds/347385/">
+          wilhelmsqueek
+        </a>
+      </li>
+    </ul>
+  </details>
+</section>
+<script
+  type="module"
+  src="{{ '/assets/coffee/player.mjs' | relative_url }}"
+></script>
